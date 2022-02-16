@@ -3,6 +3,48 @@
 {% block content %}
     
 	
+
+
+<style>
+	/* div.alert{
+		 contain: content;
+		justify-content: center;
+   } */
+
+div.alert-success {
+ position: fixed;
+ top: 0;
+ left: 0;
+}
+</style>
+
+
+{% if messages %}	
+<div class="text-center" id="alert__message" style=" display:flex; justify-content: center; width: 100vw;">
+	<div class="alert alert-success absolute text-center" role="alert" style="z-index: 9999;" auto-close="2000">
+		{% for msg in messages %} {{msg}} {% endfor %}
+	</div>
+</div>
+{% endif %}
+	
+
+ <script>
+setTimeout(() => {
+  const box = document.getElementById('alert__message');
+
+  box.style.display = 'none';
+
+}, 2000); 
+
+   </script>
+   
+
+
+
+
+
+
+
 <header class="main-header clearfix"  style="background-color: #1e1e22;">
     <nav class="main-menu clearfix">
         <div class="main-menu-wrapper clearfix" style="padding: 0;">
