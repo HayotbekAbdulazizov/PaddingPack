@@ -37,7 +37,7 @@ class ProductImages(TranslatableModel):
     translations = TranslatedFields(
         image = models.ImageField('Product_image', upload_to='product_images/'),
     )
-    product = models.ForeignKey("Product", null=True, blank=True, on_delete=models.CASCADE)
+    product = models.ForeignKey("Product", related_name="images", null=True, blank=True, on_delete=models.CASCADE)
     class Meta:
         verbose_name = "ProductImage"
         verbose_name_plural = "ProductImages"

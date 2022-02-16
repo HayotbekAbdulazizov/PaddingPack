@@ -60,8 +60,16 @@ class ProductDetailView(View):
 	def post(self,request, pk):
 		product = Product.objects.get(id=pk)
 		additional_data = f""
-		for input_value in product.form_input.all():
-			additional_data += f" {input_value.name} : {request.POST[input_value.name]} \n"
+		if product.form_input.all().count():
+			for input_value in product.form_input.all():
+				data = ''
+				try:
+					data = f" {input_value.name} : {request.POST[input_value.name]} \n"
+				except:
+					data= f"{input_value.name} : Not Given !"
+				finally:
+					additional_data += data
+					 	
 		amount = request.POST['amount']
 		name = request.POST['name']
 		phone = request.POST['phone']
