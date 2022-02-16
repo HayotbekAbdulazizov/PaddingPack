@@ -10,10 +10,12 @@ from django.conf.urls import handler404
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('i18n/', include('django.conf.urls.i18n')),
+    path('', include('django.conf.urls.i18n')),
 ]
+
 urlpatterns += i18n_patterns(
     path('', include('main.urls', namespace='main')),
+    prefix_default_language=False,
 )
 
 
