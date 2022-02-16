@@ -1,0 +1,191 @@
+		<header class="main-header clearfix">
+			<nav class="main-menu clearfix">
+				<div class="main-menu-wrapper clearfix">
+					<div class="main-menu-wrapper__left clearfix">
+						<div class="main-menu-wrapper__logo">
+							<a href="index.html"><img src="/static/assets/wout_text_prev_ui.png" style="width: 70px;" id="logo" alt=""></a>
+						</div>
+						<div class="main-menu-wrapper__search-box" >
+							<a href="#" class="main-menu-wrapper__search search-toggler icon-magnifying-glass" ></a>
+						</div>
+						<div class="main-menu-wrapper__social">
+							<a href="#"><i class="fab fa-twitter"></i></a>
+							<a href="#" class="clr-fb"><i class="fab fa-facebook"></i></a>
+							<a href="#" class="clr-dri"><i class="fab fa-pinterest-p"></i></a>
+							<a href="#" class="clr-ins"><i class="fab fa-instagram"></i></a>
+						</div>
+					</div>
+					<div class="main-menu-wrapper__main-menu">
+						<a href="#" class="mobile-nav__toggler">
+							<span></span>
+						</a>
+						<ul class="main-menu__list one-page-scroll-menu">
+							<li class="dropdown scrollToLink current">
+								<a href="#home">Home</a>
+							</li>
+							<li class="scrollToLink"><a href="#about">About</a></li>
+							<li class="scrollToLink"><a href="#blog"> Our Products	 </a></li>
+							<li class="scrollToLink"><a href="#contact">Contact</a></li>
+						</ul>
+					</div>
+					<div class="main-menu-wrapper__right">
+						<div class="main-menu-wrapper__right-contact-box">
+							<div class="main-menu-wrapper__right-contact-icon">
+								<span class="icon-phone-call"></span>
+							</div>
+							<div class="main-menu-wrapper__right-contact-number">
+								<a href="tel:92-666-888-0000">92 666 888 0000</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+
+
+
+
+
+
+
+
+		Kompaniyada qadoqlash sanoatida katta tajribaga ega yuqori malakali mutaxassislar ishlaydi, ular sizga qadoqlash materiallaridan foydalanishni optimallashtirish bo'yicha professional maslahatlar beradi. Kompaniya Toshkent shahri, Sergeli sh.tuman, janubiy sanoat zonasi, 154-uy  
+
+
+The company employs highly qualified specialists with extensive experience "
+"in the packaging industry, who will give you professional advice on "
+"optimizing the use of packaging material. Located in city Tashkent, Sergeli "
+"district, southern industrial zone, 154
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<header class="main-header clearfix" >
+		<nav class="main-menu clearfix">
+			<div class="main-menu-wrapper clearfix" style="padding: 0;">
+				<div class="main-menu-wrapper__left clearfix" style="width: 100%;">
+					<div class="main_paddingpack" style="display: flex;  align-items: center;max-width: 70%;">
+						<a href="{% url 'main:home' %}" style="width: 50%;"><img src="/static/wout_text_prev_ui.png" id="padding_pack__logo" style="padding-bottom: 15px;" alt=""> <span id="brand__text" style=" "> Padding <span style="color: orangered;"> Pack</span></span> </a>
+						<a href="#" class="mobile-nav__toggler" style="float: right;">
+							<span></span>
+						</a>
+
+					</div>
+					<div class="main-menu-wrapper__main-menu" style="padding-right: 5%;">
+						<ul class="main-menu__list one-page-scroll-menu">
+							<li class=" scrollToLink p" >
+								<a href="#home" style="font-weight: bold;"> {% trans 'Home' %} </a>
+							</li>
+							<li class="scrollToLink"><a href="#about" style="font-weight: bold;"> {% trans 'About' %} </a></li>
+							<li class="scrollToLink"><a href="#blog" style="font-weight: bold;"> {% trans 'Products' %} </a></li>
+							<li class="scrollToLink"><a href="#contact" style="font-weight: bold;"> {% trans 'Contact' %} </a></li>
+							<!-- {% if request.user.is_superuser %}	 -->
+							<!-- <li class="scrollToLink"><a href="{% url 'admin:index' %}" style="font-weight: bold;">Admin</a></li> -->
+							<!-- {% endif %} -->
+						</ul>
+					</div>
+					<div class="main-menu-wrapper__right">
+						<div class="main-menu-wrapper__right-contact-box">
+							<div class="main-menu-wrapper__right-contact-icon">
+								<span class="icon-phone-call"></span> 
+							</div>
+							<span class="" style="font-size: 21px; color: whitesmoke; font-weight: bold;"> +998916020335 </span> 
+						</div>
+					</div>
+				</div>
+			</nav>
+		</header>	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<header class="main-header clearfix" >
+    <nav class="main-menu clearfix">
+        <div class="main-menu-wrapper clearfix" style="padding: 0;">
+            <div class="main-menu-wrapper__left clearfix" style="width: 100%;">
+                <div class="main_paddingpack	" style="display: flex;  align-items: center;">
+                    <a href="{% url 'main:home' %}" style="width: 100%;"><img src="/static/wout_text_prev_ui.png" id="padding_pack__logo" style="padding-bottom: 15px;" alt=""> <span id="brand__text" style=" "> Padding <span style="color: orangered;"> Pack</span></span> </a>
+                </div>
+                <a href="#" class="mobile-nav__toggler" style="float: right; position: relative ; transform: translateY(-60px);">
+                    <span></span>
+                </a>
+                <div class="main-menu-wrapper__main-menu" style="padding-right: 0%;">
+                    <ul class="main-menu__list one-page-scroll-menu">
+                        <li class=" scrollToLink p" >
+                            <a href="#home" style="font-weight: bold;"> {% trans 'Home' %} </a>
+                        </li>
+                        <li class="scrollToLink"><a href="#about" style="font-weight: bold;"> {% trans 'About' %} </a></li>
+                        <li class="scrollToLink"><a href="#products" style="font-weight: bold;"> {% trans 'Products' %} </a></li>
+                        <li class="scrollToLink"><a href="#contact" style="font-weight: bold;"> {% trans 'Contact' %} </a></li>
+                        <li class="scrollToLink">
+                            <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+                                <input name="next" type="hidden" value="{{ redirect_to }}">
+                                <!-- <select name="language" onchange="this.form.submit()"> -->
+                                    {% get_current_language as LANGUAGE_CODE %}
+                                    {% get_available_languages as LANGUAGES %}
+                                    {% get_language_info_list for LANGUAGES as languages %}
+                                    {% for language in languages %}
+                                    <button style="background: none; border: none;">
+                                        <input type="submit" class="language_code" name="language" onclick="this.form.submit()" value="{{language.code}}">
+                                </button>
+                                    {% endfor %}
+                                <!-- </select> -->
+                            </form>
+                        </li>
+                        <li class="scrollLink id_phone">
+                            <div class="main-menu-wrapper__right-contact-box">
+                                <div class="main-menu-wrapper__right-contact-icon">
+                                    <span class="icon-phone-call"></span> 
+                                </div>
+                                <span class="" style="font-size: 21px; color: whitesmoke; font-weight: bold;"> +998916020335 </span> 
+                            </div>
+                        </li>
+                        <!-- {% if request.user.is_superuser %}	 -->
+                        <!-- <li class="scrollToLink"><a href="{% url 'admin:index' %}" style="font-weight: bold;">Admin</a></li> -->
+                        <!-- {% endif %} -->
+                    </ul>
+                </div>
+                <!-- <div class="main-menu-wrapper__right"> -->
+                    <!-- <div class="main-menu-wrapper__right-contact-box">
+                        <div class="main-menu-wrapper__right-contact-icon">
+                            <span class="icon-phone-call"></span> 
+                        </div>
+                        <span class="" style="font-size: 21px; color: whitesmoke; font-weight: bold;"> +998916020335 </span> 
+                    </div> -->
+                <!-- </div> -->
+            </div>
+        </nav>
+</header>

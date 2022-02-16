@@ -1,0 +1,454 @@
+{% extends 'wrapper.html' %}
+{% load i18n %}
+{% block content %}
+    
+	
+<header class="main-header clearfix"  style="background-color: #1e1e22;">
+    <nav class="main-menu clearfix">
+        <div class="main-menu-wrapper clearfix" style="padding: 0;">
+            <div class="main-menu-wrapper__left clearfix" style="width: 100%;">
+                <div class="main_paddingpack	" style=" align-items: center;">
+                    <a href="{% url 'main:home' %}" style="width: 100%;"><img src="/static/wout_text_prev_ui.png" id="padding_pack__logo" style="padding-bottom: 15px;" alt="">  </a><span id="brand__text" style=" "> Padding <span style="color: orangered;"> Pack</span></span>
+                </div>
+                <a href="#" class="mobile-nav__toggler" style="float: right; position: relative ; transform: translateY(-60px);">
+                    <span></span>
+                </a>
+                <div class="main-menu-wrapper__main-menu" style="padding-right: 0%;">
+                    <ul class="main-menu__list one-page-scroll-menu">
+                        <li class=" scrollToLink p" >
+                            <a href="{% url 'main:home' %}" style="font-weight: bold;"> {% trans 'Home' %} </a>
+                        </li>
+                        <li class="scrollToLink"><a href="{% url 'main:about' %}" style="font-weight: bold;"> {% trans 'About' %} </a></li>
+                        <li class="scrollToLink"><a href="#products" style="font-weight: bold;"> {% trans 'Products' %} </a></li>
+                        <li class="scrollToLink"><a href="#contact" style="font-weight: bold;"> {% trans 'Contact' %} </a></li>
+                        <li class="scrollToLink">
+                            <!-- <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+                                <input name="next" type="hidden" value="{{ redirect_to }}">
+                                <select name="language" onchange="this.form.submit()" class="custom-select" style="background: none; border: none; color: white; font-weight: bold;">
+                                    {% get_current_language as LANGUAGE_CODE %}
+                                    {% get_available_languages as LANGUAGES %}
+                                    {% get_language_info_list for LANGUAGES as languages %}
+                                    {% for language in languages %}
+                                        <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                                             {{ language.code }}
+                                        </option>
+                                    {% endfor %}
+                                </select>
+                            </form> -->
+
+
+                            <form action="{% url 'set_language' %}" method="post">
+                                {% csrf_token %}
+                                <input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}" />
+                                <select name="language"  onchange="this.form.submit()" class="custom-select" style="background: none; border: none; color: white; font-weight: bold; text-transform: uppercase;">
+                                  {% get_language_info_list for LANGUAGES as languages %}
+                                    {% for language in languages %}
+                                        <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}  style="text-transform: uppercase;">
+                                             {{ language.code }}
+                                        </option>
+                                    {% endfor %}
+                                </select>
+                              </form>
+
+
+
+                            
+                        </li>
+                        <li class="scrollLink id_phone">
+                            <div class="main-menu-wrapper__right-contact-box">
+                                <div class="main-menu-wrapper__right-contact-icon">
+                                    <span class="icon-phone-call"></span> 
+                                </div>
+                                <span class="" style="font-size: 21px; color: whitesmoke; font-weight: bold;"> 
+                                    (+99890) 8996864
+                                     </span> 
+                            </div>
+                        </li>
+                        <!-- {% if request.user.is_superuser %}	 -->
+                        <!-- <li class="scrollToLink"><a href="{% url 'admin:index' %}" style="font-weight: bold;">Admin</a></li> -->
+                        <!-- {% endif %} -->
+                    </ul>
+                </div>
+                <!-- <div class="main-menu-wrapper__right"> -->
+                    <!-- <div class="main-menu-wrapper__right-contact-box">
+                        <div class="main-menu-wrapper__right-contact-icon">
+                            <span class="icon-phone-call"></span> 
+                        </div>
+                        <span class="" style="font-size: 21px; color: whitesmoke; font-weight: bold;"> +998916020335 </span> 
+                    </div> -->
+                <!-- </div> -->
+            </div>
+        </nav>
+</header>
+
+
+        <div class="stricky-header stricked-menu main-menu">
+            <div class="sticky-header__content"></div><!-- /.sticky-header__content -->
+        </div><!-- /.stricky-header -->
+
+        <!--Page Header Start-->
+        <!-- <section class="page-header" style="background-image: url(/static/assets/images/bg2.jpg);">
+            <div class="page-header-shape-1"></div>
+            <div class="page-header-shape-2"></div>
+            <div class="container">
+                <div class="page-header__inner">
+                    <ul class="thm-breadcrumb list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><span>.</span></li>
+                        <li>About us</li>
+                    </ul>
+                    <h2>About us</h2>
+                </div>
+            </div>
+        </section> -->
+        <!--Page Header End-->
+
+        <!--Reasons Start-->
+
+        <section class="reasons"  style="display: flex;justify-content: center; padding-bottom: 30px;">
+            <div class="container" style="margin-left: 5px;margin-right:5px; width: 100%; padding-top: 50px; padding-bottom: 0%;">
+                <div class="row" >
+                    <div class="col-xl-4 col-lg-4 pt-5" style="height: 50vh;" >
+                        <div class="reasons__left" style="margin: 0;">
+                            <div class="reasons__img" style="align-items: center; padding: 25px;">
+                                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+                                    <!-- <ol class="carousel-indicators"> -->
+                                    <!-- <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li> -->
+                                      <!-- <li data-target="#carouselExampleIndicators" data-slide-to="1"></li> -->
+                                      <!-- <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> -->
+                                    <!-- </ol> -->
+
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="{{object.image.url}}" class="d-block w-100" alt="...">
+                                        </div>
+                                        {% if image.objects.all.count %}
+                                        {% for image in object.images.all %}                                            
+                                            <div class="carousel-item active">
+                                                <img src="{{image.url}}" class="d-block w-100" alt="...">
+                                            </div>
+                                        {% endfor %}
+                                        {% endif %}
+                                    </div>
+
+                                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                      <span class="sr-only">Previous</span>
+                                    </a>
+
+                                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                      <span class="sr-only">Next</span>
+                                    </a>
+
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-8 col-lg-8">
+                        <div class="reasons__right">
+                            <div class="section-title text-left">
+
+                                <span class="section-title__tagline" style="color: #fc653c;"> {% trans 'product name ' %} </span>
+                                <h2 class="section-title__title" id="object_name" style="font-weight: bold; font-size: 30px;"> {{object.name}} </h2>
+                            </div>
+                            <p class="reasons__text" style=" color: black; font-weight: bold; "> {{object.description |safe}} </p>
+                            <!-- <ul class="list-unstyled reasons__list">
+                                <li>
+                                    <div class="icon">
+                                        <span class="icon-tick"></span>
+                                    </div>
+                                    <div class="text">
+                                        <p>Highly trained in administrative tasks</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <span class="icon-tick"></span>
+                                    </div>
+                                    <div class="text">
+                                        <p>Professionally managed and supported</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <span class="icon-tick"></span>
+                                    </div>
+                                    <div class="text">
+                                        <p>Proficient in google, and most productivity suites</p>
+                                    </div>
+                                </li>
+                            </ul> -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+<!-- Button trigger modal -->
+
+<center>
+    <button data-toggle="modal" data-target="#exampleModal"  type="submit" class="thm-btn" style="cursor: pointer;"><span> {% trans 'Order' %} </span></button>
+</center>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"> {% trans 'Order product' %} </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+          <!-- <form action="" method="POST">
+              {% csrf_token %}
+              <div class="displayflex" style="display: flex; justify-content: space-around;">
+                <img src="{{object.image.url}}" style="width: 30%; height: 30%;" alt="">
+                <div class="outer_heading" style="text-align: center; display: flex; flex-direction: column; vertical-align: middle; padding-right: 20px;">
+                <h4 style="font-weight: bold; font-size: 100%; "> {{object.name}} </h4>
+                 <li style="font-weight: bold; font-size: 60%; color: orangered;  "> {{object.category.name}} </li>
+
+                 <input type="number" name="product" value="{{object.id}}"  id="">
+                 <input type="text" name="image" value="{{object.image.url}}"  id="">
+                </div>
+        </div>
+
+            <input type="number" name="{{object.id}}" value="{{object.id}}" id="">
+            <input type="text" name="name" id="">
+            <button type="submit">  SEnd </button>
+            </form>  -->
+
+            <!-- <form action="" method="POST">
+                {% csrf_token %}
+                <div class="displayflex" style="display: flex; justify-content: space-around;">
+                    <img src="{{object.image.url}}" style="width: 30%; height: 30%;" alt="">
+                    <div class="outer_heading" style="text-align: center; display: flex; flex-direction: column; vertical-align: middle; padding-right: 20px;">
+                    <h4 style="font-weight: bold; font-size: 100%; "> {{object.name}} </h4>
+                     <li style="font-weight: bold; font-size: 60%; color: orangered;  "> {{object.category.name}} </li>
+    
+                     <input type="number" name="product" value="{{object.id}}"  hidden>
+                     <input type="text" name="image" value="{{object.image.url}}"  hidden>
+                    </div>
+                </div>
+
+                    <input type="text" name="name" placeholder="Enter your Name"    >
+                    <input type="email" name="email" placeholder="Enter your Email">
+                    <input type="text" name="phone"  placeholder="+ ">
+                    <input type="number" value="1" name="amount" min="1" >
+                    {% for input in object.form_input.all %}
+                        <input type="{{input.type}}" name="{{input.name}}"  {% if input.type == 'text' %} placeholder="{{input.placeholder}}" {% endif %}>
+                    {% endfor %}
+                    <textarea name="message" cols="30" rows="3"></textarea>
+                    <button type="submit"> send </button>
+            </form> -->
+
+
+
+            <div class="contact-page__form contact-page__form--one-page">
+                <form action="" class="comment-one__form " method="POST">
+                    {% csrf_token %}
+                    <div class="displayflex" style="display: flex; justify-content: space-around;">
+                        <img src="{{object.image.url}}" style="width: 30%; height: 30%;" alt="">
+                        <div class="outer_heading" style="text-align: center; display: flex; flex-direction: column; vertical-align: middle; padding-right: 20px;">
+                        <h4 style="font-weight: bold; font-size: 100%; "> {{object.name}} </h4>
+                         <li style="font-weight: bold; font-size: 60%; color: orangered;  "> {{object.category.name}} </li>
+        
+                         <input type="number" name="product" value="{{object.id}}"  hidden>
+                         <input type="text" name="image" value="{{object.image.url}}"  hidden>
+                         <input type="text" name="sizing" value="{{object.sizing}}"  hidden>
+                        </div>
+                    </div>
+                    <div class="row pt-3">
+                        <div class="col-xl-6">
+                            <div class="comment-form__input-box">
+                                <input type="text" placeholder=" {% trans 'Your name' %} " name="name">
+                            </div>
+                        </div>
+                        <div class="col-xl-6">
+                            <div class="comment-form__input-box">
+                                <input type="email" placeholder=" {% trans 'Email Address' %} " name="email">
+                            </div>
+                        </div>
+                        <div class="col-xl-6">
+                            <div class="comment-form__input-box">
+                                <input type="text" placeholder=" {% trans 'Phone number' %} " name="phone">
+                            </div>
+                        </div>
+                        <div class="col-xl-6">
+                            <div class="comment-form__input-box">
+                                <input class="amount" type="number" placeholder=" {% trans 'Quantity' %}{{object.sizing}}"  style="background-color: #f1f1f5; border-radius: 30px; color: #717178;" name="amount">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="comment-form__input-box">
+                                <textarea name="message" placeholder=" {% trans 'Write Message' %} "></textarea>
+                            </div>
+                            <center>
+                            <button  type="submit" class="thm-btn"><span> {% trans 'Order' %} </span></button>
+                        </center>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+        <!--Reasons End-->
+
+        <!--Counter One Start-->
+
+        <!--Counter One End-->
+
+        <!--We Change Start-->
+
+        <!--We Change End-->
+
+        <!--Testimonial One Start-->
+
+        <!--Testimonial One End-->
+
+        <!--Video One Start-->
+
+        <!--Video One End-->
+
+        <!--Team One Start-->
+
+        <!--Team One End-->
+
+        <!--Brand Two-->
+
+        <!--Brand Two End-->
+
+        <!--Site Footer One Start-->
+
+        <!--Site Footer One End-->
+
+
+    </div><!-- /.page-wrapper -->
+
+
+
+    <!-- /.mobile-nav__wrapper -->
+
+    <!-- /.search-popup -->
+
+ <!-- <br><br><br><br><br>
+ <form action="" method="POST">
+    {% csrf_token %}
+    <div class="displayflex" style="display: flex; justify-content: space-around;">
+      <img src="{{object.image.url}}" style="width: 30%; height: 30%;" alt="">
+      <div class="outer_heading" style="text-align: center; display: flex; flex-direction: column; vertical-align: middle; padding-right: 20px;">
+      <h4 style="font-weight: bold; font-size: 100%; "> {{object.name}} </h4>
+       <li style="font-weight: bold; font-size: 60%; color: orangered;  "> {{object.category.name}} </li>
+
+       <input type="number" name="product" value="{{object.id}}"  id="">
+       <input type="text" name="image" value="{{object.image.url}}"  id="">
+      </div>
+</div>
+
+  <input type="number" name="{{object.id}}" value="{{object.id}}" id="">
+  <input type="text" name="name" id="">
+  <button type="submit">  SEnd </button>
+  </form> -->
+
+
+
+
+
+
+
+    <style>
+        	.outer_block__card{background-color: rgba(252, 155, 15, 0.4);}
+	/* .outer_a:hover .outer_block__card{ */
+		/* transform: scale(1.05); */
+		/* transition: ease 1s; */
+		/* background-color: rgba(255,179,71);		 */
+/* } */
+        .reasons__text{
+            font-size: 17px;
+            line-height: 27px;
+            letter-spacing: 0.1px;
+        }
+        .section-title__title{
+            font-size: 25px;
+        }
+
+
+
+    </style>
+
+<style>
+    #brand__text{color: white; font-size: 30px;font-weight: bold;}
+    .outer_block__card{background-color: rgba(255,179,71, 0.5);}
+    .outer_a:hover .outer_block__card{transform: scale(1.05);transition: ease 1s;background-color: rgba(255,179,71);		}
+    .main_paddingpack{width: 25%;}
+    .outer{padding-left: 20px;padding-right: 20px;}
+    .main_home__img{width: 80%;}
+    .site-footer-top-bg{padding: 0%;}
+    #padding_pack__logo{width: 18%; }
+    .padding{font-size: 90px;line-height: 5rem;}
+    .main-menu-wrapper__main-menu{ width: 82%; }
+    .language_code{border: none;background: none;font-weight: bold;color: white;text-transform: uppercase;border-right: 1px solid black;}
+    .a_outer{background-color: rgba(255,165,0, 0.7); width: 95%; height: 95%; padding-top: 15px; border-radius: 15px; padding-bottom: 5px;}
+    .a_outer:hover{ transition: all ease-in 0.4s; background-color: orange;}
+
+
+    /* Mobile */
+    @media only screen and (max-width: 860px ) {
+    .padding{font-size: 70px;line-height: 3.7rem;}
+    /* .additional_text{display: none;}	 */
+    .main-slider{padding-top: 250px;}
+    .outer{padding-top: 150px;}
+    .main_home__img{width: 95%;max-width: 450px;}
+    #brand__text{display: none;}
+    #padding_pack__logo{width: 70px;padding-top: 10px;}
+    .main_paddingpack{width: 100%;}
+    .prod_of_cg{display: none;}
+    .id_phone{display: none;}
+    .addtional_item{font-size: 20px;}
+    input.amount{margin-bottom: 20px;}
+    
+}
+
+
+
+
+    @media only screen and (min-width: 920px) {
+        .padding{font-size: 60px;line-height: 5rem;}
+}
+
+    .main-slider{background-color: darkslategray;height: 100vh;max-height: 100vh;overflow: hidden;}
+    /* .scrollToLink{ */
+        /* margin: 0%  !important;  */
+    /* } */
+
+    input[type="number"]{
+    width: 100%;
+    background-color: #fff;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    height: 66px;
+    padding-left: 30px;
+}
+
+    </style>
+
+
+
+
+
+
+
+    <!-- https://dev.to/selbekk/how-to-overlay-your-background-images-59le -->
+    {% endblock content %}

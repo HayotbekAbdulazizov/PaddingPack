@@ -1,0 +1,171 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-16 00:10+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: Trash/trash.txt:87 Trash/trash.txt:148 templates/about.html:21
+#: templates/about.html:97 templates/category_detail.html:19
+#: templates/index.html:64 templates/product_detail.html:19
+#: templates/wrapper.html:129 trash.txt:87 trash.txt:148
+msgid "Home"
+msgstr "Главный"
+
+#: Trash/trash.txt:89 Trash/trash.txt:150 templates/about.html:23
+#: templates/category_detail.html:21 templates/index.html:66
+#: templates/product_detail.html:21 templates/wrapper.html:132 trash.txt:89
+#: trash.txt:150
+msgid "About"
+msgstr "О компании"
+
+#: Trash/trash.txt:90 Trash/trash.txt:151 templates/about.html:24
+#: templates/category_detail.html:22 templates/index.html:67
+#: templates/product_detail.html:22 templates/wrapper.html:135 trash.txt:90
+#: trash.txt:151
+msgid "Products"
+msgstr "Продукты"
+
+#: Trash/trash.txt:91 Trash/trash.txt:152 templates/about.html:25
+#: templates/category_detail.html:23 templates/index.html:68
+#: templates/product_detail.html:23 templates/wrapper.html:117
+#: templates/wrapper.html:138 trash.txt:91 trash.txt:152
+msgid "Contact"
+msgstr "Контакт"
+
+#: main/views.py:27
+msgid "Your message was successfully submitted, please wait our call !"
+msgstr "Ваше сообщение успешно отправлено, ждите нашего звонка!"
+
+#: main/views.py:74
+#, fuzzy
+#| msgid "Your order was successfully submitted, please wait our call !"
+msgid "Your order was successfully submitted, please wait our call ! !"
+msgstr "Ваш заказ успешно отправлен, ждите нашего звонка!"
+
+#: templates/404.html:26
+msgid "Sorry ! the page you are looking for can not be found"
+msgstr "К сожалению, произошла ошибка, Запрошенная Вами страница не найдена!"
+
+#: templates/404.html:28
+#, fuzzy
+#| msgid "Home"
+msgid "HomePage"
+msgstr "Главный"
+
+#: templates/about.html:99 templates/about.html:101
+msgid "About company"
+msgstr "О компании"
+
+#: templates/category_detail.html:112
+msgid "category name "
+msgstr "название категории"
+
+#: templates/index.html:145 templates/index.html:191
+msgid "Production of corrugated packaging"
+msgstr "Производство гофроупаковки"
+
+#: templates/index.html:190
+msgid "About Company"
+msgstr "О компании"
+
+#: templates/index.html:193
+msgid ""
+"The company employs highly qualified specialists with extensive experience "
+"in the packaging industry, who will give you professional advice on "
+"optimizing the use of packaging material. "
+msgstr ""
+"«В компании работают высококвалифицированные специалисты с большим опытом "
+"работы в упаковочной промышленности, который даст вам профессиональный совет "
+"по оптимизация использования упаковочного материала."
+
+#: templates/index.html:194
+msgid "Tashkent, Sergeli district, southern industrial zone, 154"
+msgstr "Ташкент, Сергелийский район, южная промзона, 154"
+
+#: templates/index.html:196
+msgid "More ..."
+msgstr "Больше ..."
+
+#: templates/index.html:219
+msgid "Our Products"
+msgstr "Наши продукты"
+
+#: templates/index.html:220
+msgid "What we are Producing"
+msgstr "Что мы производим"
+
+#: templates/index.html:263
+msgid "Contact with us"
+msgstr "Свяжитесь с нами"
+
+#: templates/index.html:264
+msgid "Get in touch with the agency"
+msgstr "Свяжитесь с компанией"
+
+#: templates/index.html:275 templates/product_detail.html:280
+msgid "Your name"
+msgstr "Ваше имя"
+
+#: templates/index.html:280 templates/product_detail.html:285
+msgid "Email Address"
+msgstr "Эл. адрес"
+
+#: templates/index.html:285 templates/product_detail.html:290
+msgid "Phone number"
+msgstr "Номер телефона"
+
+#: templates/index.html:292 templates/product_detail.html:302
+msgid "Write Message"
+msgstr "Написать сообщение"
+
+#: templates/index.html:295
+msgid "Send a message"
+msgstr "Отправить "
+
+#: templates/product_detail.html:165
+msgid "product name "
+msgstr "наименование товара"
+
+#: templates/product_detail.html:205 templates/product_detail.html:305
+msgid "Order"
+msgstr ""
+
+#: templates/product_detail.html:212
+#, fuzzy
+#| msgid "Our Products"
+msgid "Order product"
+msgstr "Наши продукты"
+
+#: templates/product_detail.html:295
+msgid "Quantity"
+msgstr ""
+
+#: templates/wrapper.html:126
+msgid "Navigation"
+msgstr "Навигация"
+
+#: templates/wrapper.html:145
+msgid "Website"
+msgstr ""
+
+#~ msgid "Creators"
+#~ msgstr "Создатели"
+
+#~ msgid "Related poducts"
+#~ msgstr "Сопутствующие товары"

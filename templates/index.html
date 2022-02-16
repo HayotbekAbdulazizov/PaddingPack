@@ -1,0 +1,470 @@
+{% extends 'wrapper.html' %}
+{% load i18n %}
+{% block content %}
+	
+
+
+
+
+<style>
+	/* div.alert{
+		 contain: content;
+		justify-content: center;
+   } */
+
+div.alert-success {
+ position: fixed;
+ top: 0;
+ left: 0;
+}
+</style>
+
+
+{% if messages %}	
+<div class="text-center" id="alert__message" style=" display:flex; justify-content: center; width: 100vw;">
+	<div class="alert alert-success absolute text-center" role="alert" style="z-index: 9999;" auto-close="2000">
+		{% for msg in messages %} {{msg}} {% endfor %}
+	</div>
+</div>
+{% endif %}
+	
+
+ <script>
+setTimeout(() => {
+  const box = document.getElementById('alert__message');
+
+  box.style.display = 'none';
+
+}, 2000); 
+
+   </script>
+   
+
+
+
+
+
+<div class="preloader">
+	<img class="preloader__image" width="60" src="/static/assets/wout_text_prev_ui.png" alt="" />
+</div>
+
+<header class="main-header clearfix" >
+    <nav class="main-menu clearfix">
+        <div class="main-menu-wrapper clearfix" style="padding: 0; ;" >
+            <div class="main-menu-wrapper__left clearfix" style="width: 100%; ">
+                <div class="main_paddingpack	" style=" align-items: center; ">
+                    <a href="{% url 'main:home' %}" style="width: 100%; z-index: 9999;"><img src="/static/wout_text_prev_ui.png" id="padding_pack__logo" style="padding-bottom: 15px;" alt="">  </a><span id="brand__text" style=" "> Padding <span style="color: orangered;"> Pack</span></span>
+                </div>
+                <a href="#" class="mobile-nav__toggler" style="float: right; position: relative ; transform: translateY(-60px);">
+                    <span></span>
+                </a>
+                <div class="main-menu-wrapper__main-menu" style="padding-right: 0%;">
+                    <ul class="main-menu__list one-page-scroll-menu">
+                        <li class=" scrollToLink p" >
+                            <a href="#home" style="font-weight: bold;"> {% trans 'Home' %} </a>
+                        </li>
+                        <li class="scrollToLink"><a href="#about" style="font-weight: bold;"> {% trans 'About' %} </a></li>
+                        <li class="scrollToLink"><a href="#products" style="font-weight: bold;"> {% trans 'Products' %} </a></li>
+                        <li class="scrollToLink"><a href="#contact" style="font-weight: bold;"> {% trans 'Contact' %} </a></li>
+                        <li class="scrollToLink">
+                            <!-- <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+                                <input name="next" type="hidden" value="{{ redirect_to }}">
+                                <select name="language" onchange="this.form.submit()" class="custom-select" style="background: none; border: none; color: white; font-weight: bold;">
+                                    {% get_current_language as LANGUAGE_CODE %}
+                                    {% get_available_languages as LANGUAGES %}
+                                    {% get_language_info_list for LANGUAGES as languages %}
+                                    {% for language in languages %}
+                                        <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                                             {{ language.code }}
+                                        </option>
+                                    {% endfor %}
+                                </select>
+                            </form> -->
+
+
+                            <form action="{% url 'set_language' %}" method="post" >
+                                {% csrf_token %}
+                                <input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}" />
+                                <select name="language"  onchange="this.form.submit()" class="custom-select" style="background: none; border: none; color: white; font-weight: bold; text-transform: uppercase;">
+                                  {% get_language_info_list for LANGUAGES as languages %}
+                                    {% for language in languages %}
+                                        <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}  style="text-transform: uppercase;">
+                                             {{ language.code }}
+                                        </option>
+                                    {% endfor %}
+                                </select>
+                                <!-- <input type="submit" value="Change" /> -->
+                              </form>
+
+
+
+                            
+                        </li>
+                        <li class="scrollLink id_phone">
+                            <div class="main-menu-wrapper__right-contact-box">
+                                <div class="main-menu-wrapper__right-contact-icon">
+                                    <span class="icon-phone-call"></span> 
+                                </div>
+                                <span class="" style="font-size: 21px; color: whitesmoke; font-weight: bold;"> (+99890) 8996864 </span> 
+                            </div>
+                        </li>
+                        <!-- {% if request.user.is_superuser %}	 -->
+                        <!-- <li class="scrollToLink"><a href="{% url 'admin:index' %}" style="font-weight: bold;">Admin</a></li> -->
+                        <!-- {% endif %} -->
+                    </ul>
+                </div>
+                <!-- <div class="main-menu-wrapper__right"> -->
+                    <!-- <div class="main-menu-wrapper__right-contact-box">
+                        <div class="main-menu-wrapper__right-contact-icon">
+                            <span class="icon-phone-call"></span> 
+                        </div>
+                        <span class="" style="font-size: 21px; color: whitesmoke; font-weight: bold;"> +998916020335 </span> 
+                    </div> -->
+                <!-- </div> -->
+            </div>
+        </nav>
+</header>
+	
+
+
+
+
+
+		<div class="stricky-header stricked-menu main-menu">
+			<div class="sticky-header__content"></div><!-- /.sticky-header__content -->
+		</div><!-- /.stricky-header -->
+
+		<!-- Banner One Start -->
+		<section class="main-slider" id="home" style="padding: 0 0 0 0;">
+			<div class="dark_overlay"></div>
+			<div class= "outer"   style="z-index: 999;">
+				<div class="row" style="align-items: center;">
+					<div class="col-md-12 col-lg-6 col-sm-12 col-xl-6" style="display: flex; justify-content: center; align-items: center;">
+						<div class="outer_text">
+							<div class="padding text-center" style="color: white; font-weight: bold; font-family: Verdana, Geneva, Tahoma, sans-serif; "> Padding <br> <span style="color: orangered;">Pack</span> 
+								<div class="text-center prod_of_cg" style="position: absolute; transform: translate(50px, -35px);"> <span style="font-size: 15px; color: whitesmoke;">{% trans 'Production of corrugated packaging' %} </span></div>
+								<!-- <span class="additional_text" style="font-size: 20px;"> 
+									г. Ташкент, Сергелийский район, южная промзона, 154
+									(+99897) 4203568; (+99893) 3911171
+									rammet90@mail.ru							
+								</span> -->
+							</div>
+							<!-- <div class="phone mt-5 ml-5 " style="width: 200px;"><i class="fas fa-phone-square-alt" style="width: 30px;height: 30px;font-size: 25px; color: darkorange;background-color: #fff;"></i> <span> (+99897) 4203568 </span> </div> -->
+						</div>
+					</div>
+					<div class="col-md-12 col-lg-6 col-sm-12 col-xl-6 pt-5 mt-5" style="padding: 0;">	
+						<div class="outer_block text-center" style="padding: 0;">
+							<center >
+							<img src="/static/redonebf.png" class="main_home__img" alt="" style="z-index: 222; ">
+							</center>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+<!-- ALERt -->
+{% if messages  %}
+	{% for msg in messages %}
+		
+	{% endfor %}
+{% endif %}	
+<!-- ALERt -->
+
+		<!--Welcome One Start-->
+		<section class="welcome-one" id="about" >
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-6">
+						<div class="welcome-one__left wow fadeInLeft" data-wow-duration="1500ms">
+							<div class="welcome-one__img-box">
+								<div class="welcome-one__img" style="border-radius: 15px;">
+									<img src="https://www.billerudkorsnas.com/globalassets/managed-packaging/our-offer/articles/meeting-the-demand-for-corrugated-packaging/meeting-the-demand-for-corrugated-packaging.jpg"  style="border-radius: 10px;" alt="">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-6">
+						<div class="welcome-one__right">
+							<div class="section-title text-left">
+								<span class="section-title__tagline text-left"> {% trans 'About Company' %} </span>
+								<h2 class="section-title__title text-left" style="font-size: 30px; line-height: 110%;"> {% trans 'Production of corrugated packaging' %} </h2>
+							</div>
+							<p class="welcome-one__right-text-1" style="margin: 0%;padding-bottom: 1%;"> {% trans 'The company employs highly qualified specialists with extensive experience in the packaging industry, who will give you professional advice on optimizing the use of packaging material. ' %} </p>
+							<i class="fas fa-map-marker-alt " style="color: #1e1e22;font-size: 25px	;"></i> <span style="color: #1e1e22; font-weight: bold;padding-left: 5px;"> {% trans 'Tashkent, Sergeli district, southern industrial zone, 154' %} </span>
+							<br>
+							<button class="btn mt-4" style="background-color: #fc653c; "><a href="{% url 'main:about' %}" class="font-weight-bold btn-class " style="color: white;"> {% trans 'More ...' %} </a></button>
+							</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--Welcome One End-->
+
+		<!--Counter One Start-->
+
+		<!--Counter One End-->
+
+		<!--Video One Start-->
+
+		<!--Video One End-->
+
+
+		<!--Services One Start-->
+		<section class="services-one" id="services" style="padding: 35px 0px 50px 0px ;" >
+			<div class="services-one-bg" id="products" style="background-color:rgba() ; padding-bottom: 55px;"> 
+			</div>
+			<div class="container" >
+				<div class="section-title text-center" style="margin-bottom: 7%;">
+					<span class="section-title__tagline"> {% trans 'Our Products' %} </span>
+					<h2 class="section-title__title"> {% trans 'What we are Producing' %} </h2>
+				</div>
+				<div class="row text-center" style="transform: translateX(18px);"> 
+					
+					{% for category in categories %}						
+					<!-- <div class="col-xl-4 col-lg-4 col-sm-12 col-12 card_outer" style="box-sizing: border-box; padding: 65px 0px 0px 5px;">
+						<a href="{% url 'main:category_detail' category.id %}" class="outer_a text-center">
+						<div class="outer_block__card"  style=" border-radius: 15px; padding-top:25px; width: 90%; height: 100%;"> 	
+						<div class="card text-center " style="align-items: center;background: none;border: none;">
+							<div class="img_outer" style="height: 70%;">
+								<img class="card-img-top" src="{{category.image.url}}" alt="Card image" style="width: 70%; min-height: 190px;">
+							</div>
+							<div class="card-body" style="height: 30%;">
+							  <h4 class="card-title" style="font-weight: bold;">{{category.name}}</h4>
+							</div>
+						  </div>
+						</div>
+					</a>
+					</div> -->
+
+
+					 <div class="col-xl-4 col-lg-4 col-sm-12 col-12 card_outer pt-3" style="box-sizing: border-box; padding: 0px 0px 0px 5px;">
+						<div style="width: 85%;height: 90%; min-height: 90%; padding-top: 25px; border-radius: 15px;" >
+							<a href="{% url 'main:category_detail' category.id %}" style="background-color: orange; " >
+								<div class="img_outer" style="height: 70%; min-height: 70%;">
+									<img class="card-img-top" src="{{category.image.url}}" alt="Card image" style="width: 70%; height: 100%; min-height: 190px;">
+								</div>
+								<div class="card-body" style="height: 30%; max-height: 30%;">
+							  		<h4 class="card-title" style="font-weight: bold;">{{category.name}}</h4>
+								</div>
+							</a>
+						</div>
+					</div> 
+
+
+					{% endfor %}
+					
+				</div>
+			</div>
+		</section>
+
+		<section class="get-in-touch" id="contact">
+			<div class="section-title text-left text-center">
+				<span class="section-title__tagline"> {% trans 'Contact with us' %} </span>
+				<h2 class="section-title__title"> {% trans 'Get in touch with the agency' %} </h2>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-6">
+						<div class="contact-page__form contact-page__form--one-page">
+							<form action="" class="comment-one__form " method="POST">
+								{% csrf_token %}
+								<div class="row">
+									<div class="col-xl-6">
+										<div class="comment-form__input-box">
+											<input type="text" placeholder=" {% trans 'Your name' %} " name="name">
+										</div>
+									</div>
+									<div class="col-xl-6">
+										<div class="comment-form__input-box">
+											<input type="email" placeholder=" {% trans 'Email Address' %} " name="email">
+										</div>
+									</div>
+									<div class="col-xl-6">
+										<div class="comment-form__input-box">
+											<input type="text" placeholder=" {% trans 'Phone number' %} " name="phone">
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-xl-12">
+										<div class="comment-form__input-box">
+											<textarea name="message" placeholder=" {% trans 'Write Message' %} "></textarea>
+										</div>
+										<center>
+										<button  type="submit" class="thm-btn"><span> {% trans 'Send a message' %} </span></button>
+									</center>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="col-xl-6 iframe">
+						<!-- <iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4562.753041141002!2d-118.80123790098536!3d34.152323469614075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80e82469c2162619%3A0xba03efb7998eef6d!2sCostco+Wholesale!5e0!3m2!1sbn!2sbd!4v1562518641290!5m2!1sbn!2sbd"
+						class="google-map__one" allowfullscreen></iframe>   -->
+						<iframe width="600" height="450" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJPd-2guVnrjgR7ReMa26jOUs&key=AIzaSyANJiysLYjIDVA6R0_jSYDs57O7GK_Z_Ok"></iframe>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+
+		<style>
+
+		</style>
+		<!--Services One End-->
+
+
+		<!--Portfolio One Start-->
+
+		<!--Portfolio One End-->
+
+
+		<!--Testimonial One Start-->
+
+		<!--Testimonial One End-->
+
+
+
+		<!--We Change Start-->
+
+		<!--We Change End-->
+
+
+
+		<!--Team One Start-->
+
+		<!--Team One End-->
+
+
+
+		<!--We Make Start-->
+
+		<!--We Make End-->
+
+
+
+		<!--Reasons One Start-->
+
+		<!--Reasons One End-->
+
+
+
+		<!--Blog One Start-->
+
+		<!--Blog One End-->
+
+
+
+		<!--Contact Page Google Map Start-->
+		<!--Contact Page Google Map End-->
+<!-- 		
+	<style>
+	#brand__text{color: white; font-size: 30px;font-weight: bold;}
+	.outer_block__card{background-color: rgba(255,179,71, 0.5);}
+	.outer_a:hover .outer_block__card{transform: scale(1.05);transition: ease 1s;background-color: rgba(255,179,71);		}
+	.main_paddingpack{width: 30%;}
+	.outer{padding-left: 20px;padding-right: 20px;}
+	.main_home__img{width: 80%;}
+	.site-footer-top-bg{padding: 0%;}
+	#padding_pack__logo{width: 13%; }
+	.padding{font-size: 90px;line-height: 5rem;}
+
+
+
+	/* Mobile */
+	@media only screen and (max-width: 860px ) {
+	.padding{font-size: 70px;line-height: 3.7rem;}
+	/* .additional_text{display: none;}	 */
+	.main-slider{padding-top: 250px;}
+	.outer{padding-top: 150px;}
+	.main_home__img{width: 95%;max-width: 450px;}
+	#brand__text{display: none;}
+	#padding_pack__logo{width: 70px;padding-top: 10px;}
+	.main_paddingpack{width: 100%;}
+	.prod_of_cg{display: none;}
+}
+
+
+
+
+	@media only screen and (min-width: 920px) {
+		.padding{font-size: 60px;line-height: 5rem;}
+}
+
+	.main-slider{background-color: darkslategray;height: 100	;max-height: 100vh;overflow: hidden;}
+	/* .scrollToLink{ */
+		/* margin: 0%  !important;  */
+	/* } */
+
+	</style>
+ -->
+
+
+
+
+
+
+
+ 		
+ <style>
+	 	
+	#brand__text{color: white; font-size: 30px;font-weight: bold;}
+	/* .outer_block__card{background-color: rgba(255,179,71, 0.5);} */
+	/* .card_outer .outer_a{ background-color: orange;} */
+	/* .outer_a:hover .outer_a{transform: scale(1.05);transition: ease 1s;background-color: rgba(255,179,71);		} */
+	.card_outer > a{ background-color: orange; }
+	.main_paddingpack{width: 25%;}
+	.outer{padding-left: 20px;padding-right: 20px; padding-top: 30px;}
+	.main_home__img{width: 80%;}
+	.site-footer-top-bg{padding: 0%;}
+	#padding_pack__logo{width: 18%; }
+	.padding{font-size: 90px;line-height: 5rem;}
+	.main-menu-wrapper__main-menu{ width: 82%; }
+	.language_code{border: none;background: none;font-weight: bold;color: white;text-transform: uppercase;border-right: 1px solid black;}
+	/* .card_outer{ padding-left: 50px; padding-right: 50px; } */
+	.card_outer > div {background-color: rgba(255,179,71, 0.8); }
+	.card_outer > div:hover { transition: all 0.5s; background-color: rgba(255,179,20, 1);}
+
+	
+	/* Mobile */
+	@media only screen and (max-width: 860px ) {
+	.padding{font-size: 70px;line-height: 3.7rem;}
+	/* .additional_text{display: none;}	 */
+	.main-slider{padding-top: 250px;}
+	.outer{padding-top: 150px;}
+	.main_home__img{width: 95%;max-width: 450px;}
+	#brand__text{display: none;}
+	#padding_pack__logo{width: 70px;padding-top: 10px;}
+	.main_paddingpack{width: 100%;}
+	.prod_of_cg{display: none;}
+	.id_phone{display: none;}
+	.iframe{padding-top: 25px;}
+}
+
+
+
+
+	@media only screen and (min-width: 920px) {
+		.padding{line-height: 5rem;}
+}
+
+	/* .main-slider{background-color: darkslategray;height: 100vh;max-height: 100vh;overflow: hidden;} */
+	.main-slider{background-image: url(/static/bghome.jpg);background-size: cover; height: 100vh;max-height: 100vh;overflow: hidden;background-attachment: fixed;}
+	.dark_overlay{
+		top: 0%;
+		bottom: 0%;
+		width: 100%;
+		height: 100vh;
+		background-color: rgba(0, 0, 0, 0.7);
+		position: absolute;
+	}
+	/* .scrollToLink{ */
+		/* margin: 0%  !important;  */
+	/* } */
+
+	</style>
+
+{% endblock content %}

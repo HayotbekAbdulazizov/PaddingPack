@@ -1,0 +1,293 @@
+{% extends 'wrapper.html' %}
+{% load i18n %}
+
+
+{% block content %}
+    
+	
+<header class="main-header clearfix" >
+    <nav class="main-menu clearfix">
+        <div class="main-menu-wrapper clearfix" style="padding: 0;">
+            <div class="main-menu-wrapper__left clearfix" style="width: 100%;">
+                <div class="main_paddingpack	" style=" align-items: center;">
+                    <a href="{% url 'main:home' %}" style="width: 100%;"><img src="/static/wout_text_prev_ui.png" id="padding_pack__logo" style="padding-bottom: 15px;" alt="">  </a><span id="brand__text" style=" "> Padding <span style="color: orangered;"> Pack</span></span>
+                </div>
+                <a href="#" class="mobile-nav__toggler" style="float: right; position: relative ; transform: translateY(-60px);">
+                    <span></span>
+                </a>
+                <div class="main-menu-wrapper__main-menu" style="padding-right: 0%;">
+                    <ul class="main-menu__list one-page-scroll-menu">
+                        <li class=" scrollToLink p" >
+                            <a href="{% url 'main:home' %}" style="font-weight: bold;"> {% trans 'Home' %} </a>
+                        </li>
+                        <li class="scrollToLink"><a href="#body" style="font-weight: bold;"> {% trans 'About' %} </a></li>
+                        <li class="scrollToLink"><a href="#products" style="font-weight: bold;"> {% trans 'Products' %} </a></li>
+                        <li class="scrollToLink"><a href="#contact" style="font-weight: bold;"> {% trans 'Contact' %} </a></li>
+                        <li class="scrollToLink">
+                            <!-- <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+                                <input name="next" type="hidden" value="{{ redirect_to }}">
+                                <select name="language" onchange="this.form.submit()" class="custom-select" style="background: none; border: none; color: white; font-weight: bold;">
+                                    {% get_current_language as LANGUAGE_CODE %}
+                                    {% get_available_languages as LANGUAGES %}
+                                    {% get_language_info_list for LANGUAGES as languages %}
+                                    {% for language in languages %}
+                                        <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                                             {{ language.code }}
+                                        </option>
+                                    {% endfor %}
+                                </select>
+                            </form> -->
+
+
+                            <form action="{% url 'set_language' %}" method="post">
+                                {% csrf_token %}
+                                <input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}" />
+                                <select name="language"  onchange="this.form.submit()" class="custom-select" style="background: none; border: none; color: white; font-weight: bold; text-transform: uppercase;">
+                                  {% get_language_info_list for LANGUAGES as languages %}
+                                    {% for language in languages %}
+                                        <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}  style="text-transform: uppercase;">
+                                             {{ language.code }}
+                                        </option>
+                                    {% endfor %}
+                                </select>
+                                <!-- <input type="submit" value="Change" /> -->
+                              </form>
+
+
+
+                            
+                        </li>
+                        <li class="scrollLink id_phone">
+                            <div class="main-menu-wrapper__right-contact-box">
+                                <div class="main-menu-wrapper__right-contact-icon">
+                                    <span class="icon-phone-call"></span> 
+                                </div>
+                                <span class="" style="font-size: 21px; color: whitesmoke; font-weight: bold;"> (+99890) 8996864 </span> 
+                            </div>
+                        </li>
+                        <!-- {% if request.user.is_superuser %}	 -->
+                        <!-- <li class="scrollToLink"><a href="{% url 'admin:index' %}" style="font-weight: bold;">Admin</a></li> -->
+                        <!-- {% endif %} -->
+                    </ul>
+                </div>
+                <!-- <div class="main-menu-wrapper__right"> -->
+                    <!-- <div class="main-menu-wrapper__right-contact-box">
+                        <div class="main-menu-wrapper__right-contact-icon">
+                            <span class="icon-phone-call"></span> 
+                        </div>
+                        <span class="" style="font-size: 21px; color: whitesmoke; font-weight: bold;"> +998916020335 </span> 
+                    </div> -->
+                <!-- </div> -->
+            </div>
+        </nav>
+</header>
+
+
+        <div class="stricky-header stricked-menu main-menu">
+            <div class="sticky-header__content"></div><!-- /.sticky-header__content -->
+        </div><!-- /.stricky-header -->
+
+        <!--Page Header Start-->
+        <section class="page-header" style="background-image: url(/static/assets/images/bg2.jpg);">
+            <div class="page-header-shape-1"></div>
+            <div class="page-header-shape-2"></div>
+            <div class="container">
+                <div class="page-header__inner">
+                    <ul class="thm-breadcrumb list-unstyled">
+                        <li><a href="{% url 'main:home' %}"> {% trans 'Home' %} </a></li>
+                        <li><span>.</span></li>
+                        <li> {% trans 'About company' %} </li>
+                    </ul>
+                    <h2> {% trans 'About company' %} </h2>
+                </div>
+            </div>
+        </section>
+        <!--Page Header End-->
+
+        <!--Reasons Start-->
+        <!-- <section class="reasons">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-5 col-lg-5">
+                        <div class="reasons__left">
+                            <div class="reasons__img">
+                                <img src="/static/assets/images/resources/reasons-img-1.jpg" alt="">
+                                <div class="reasons__img-shape-1"></div>
+                                <div class="reasons__img-shape-2"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-7 col-lg-7">
+                        <div class="reasons__right">
+                            <div class="section-title text-left">
+                                <span class="section-title__tagline">Our benefits</span>
+                                <h2 class="section-title__title">Reasons why we are best</h2>
+                            </div>
+                            <p class="reasons__text">Tincidunt elit magnis nulla facilisis sagittis maecenas. sapien
+                                nunc amet ultrices, dolores sit ipsum velit purus aliquet, massa fringilla leo orci not
+                                dong right. Lorem ipsum dolors sit amet elit magnis.</p>
+                            <ul class="list-unstyled reasons__list">
+                                <li>
+                                    <div class="icon">
+                                        <span class="icon-tick"></span>
+                                    </div>
+                                    <div class="text">
+                                        <p>Highly trained in administrative tasks</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <span class="icon-tick"></span>
+                                    </div>
+                                    <div class="text">
+                                        <p>Professionally managed and supported</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <span class="icon-tick"></span>
+                                    </div>
+                                    <div class="text">
+                                        <p>Proficient in google, and most productivity suites</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <a href="contact.html" class="thm-btn reasons__btn"><span>Free consultation</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section> -->
+        <!--Reasons End-->
+
+
+        <section class="reasons" style="padding: 0; padding-top: 30px;" id="body">
+            <div class="container" style="padding-left: 5px; padding-right: 5px;">
+                <div class="row">
+                    {% for about_item in about_items %}
+                        <div class="col-md-6 col-lg-6 col-xl-6 col-sm-12 aboutitem_image" style="padding-top: 35px;float: right;">
+                            <img src="{{about_item.image.url}}" alt="" style="border-radius: 30px;max-width: 100%; width: 100%; ">
+                        </div>
+                        <div class="col-md-6 col-lg-6 col-xl-6 col-sm-12 aboutitem_image" style="padding:5% 20px  50px 20px;float: left;">
+                            <div class="about_item__text" style="font-size: 19px; color: rgb(10, 19, 19); font-weight: bold;">
+                                {{about_item.body }}
+                            </div>
+                        </div>
+
+                        <!-- <script>
+                            const
+                                screen = {small: 0,medium: 400,large: 800};
+                                window.addEventListener('resize', resizeHandler);
+                                resizeHandler();
+                                function resizeHandler() {
+                                const iw = window.innerWidth;
+                                let size = null;
+                                for (let s in screen) {
+                                    if (iw >= screen[s]) size = s;
+                                }
+                                console.log(size);
+                                if (size === 'large'){
+                                    console.log(size, document.getElementsByClassName('about_item__text')[0].innerHTML)
+                                    // let outer_cont = document.getElementsByClassName
+                                }
+                                return size
+                                }
+                        </script> -->
+                        {% endfor %}
+                </div>
+            </div>
+        </section>
+
+
+        <!--Counter One Start-->
+
+        <!--Counter One End-->
+
+        <!--We Change Start-->
+
+        <!--We Change End-->
+
+        <!--Testimonial One Start-->
+
+        <!--Testimonial One End-->
+
+        <!--Video One Start-->
+
+        <!--Video One End-->
+
+        <!--Team One Start-->
+
+        <!--Team One End-->
+
+        <!--Brand Two-->
+
+        <!--Brand Two End-->
+
+        <!--Site Footer One Start-->
+
+        <!--Site Footer One End-->
+
+
+    </div><!-- /.page-wrapper -->
+
+
+
+    <!-- /.mobile-nav__wrapper -->
+
+    <!-- /.search-popup -->
+		
+	<style>
+        #brand__text{color: white; font-size: 30px;font-weight: bold;}
+        .outer_block__card{background-color: rgba(255,179,71, 0.5);}
+        .outer_a:hover .outer_block__card{transform: scale(1.05);transition: ease 1s;background-color: rgba(255,179,71);		}
+        .main_paddingpack{width: 25%;}
+        .outer{padding-left: 20px;padding-right: 20px;}
+        .main_home__img{width: 80%;}
+        .site-footer-top-bg{padding: 0%;}
+        #padding_pack__logo{width: 18%; }
+        .padding{font-size: 90px;line-height: 5rem;}
+        .main-menu-wrapper__main-menu{ width: 82%; }
+        .language_code{border: none;background: none;font-weight: bold;color: white;text-transform: uppercase;border-right: 1px solid black;}
+    
+    
+        /* Mobile */
+        @media only screen and (max-width: 860px ) {
+        .padding{font-size: 70px;line-height: 3.7rem;}
+        /* .additional_text{display: none;}	 */
+        .main-slider{padding-top: 250px;}
+        .outer{padding-top: 150px;}
+        .main_home__img{width: 95%;max-width: 450px;}
+        #brand__text{display: none;}
+        #padding_pack__logo{width: 70px;padding-top: 10px;}
+        .main_paddingpack{width: 100%;}
+        .prod_of_cg{display: none;}
+        .id_phone{display: none;}
+        
+    }
+    
+    
+    
+    
+        @media only screen and (min-width: 920px) {
+            .padding{font-size: 60px;line-height: 5rem;}
+    }
+    
+        .main-slider{background-color: darkslategray;height: 100vh;max-height: 100vh;overflow: hidden;}
+        /* .scrollToLink{ */
+            /* margin: 0%  !important;  */
+        /* } */
+    
+        </style>
+    
+    
+
+
+
+
+
+
+
+    <!-- https://dev.to/selbekk/how-to-overlay-your-background-images-59le -->
+    {% endblock content %}

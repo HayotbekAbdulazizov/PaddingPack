@@ -1,0 +1,338 @@
+{% extends 'wrapper.html' %}
+{% load i18n %}
+{% block content %}
+    
+	
+<header class="main-header clearfix"  style="background-color: #1e1e22;">
+    <nav class="main-menu clearfix">
+        <div class="main-menu-wrapper clearfix" style="padding: 0;">
+            <div class="main-menu-wrapper__left clearfix" style="width: 100%;">
+                <div class="main_paddingpack	" style=" align-items: center;">
+                    <a href="{% url 'main:home' %}" style="width: 100%;"><img src="/static/wout_text_prev_ui.png" id="padding_pack__logo" style="padding-bottom: 15px;" alt="">  </a><span id="brand__text" style=" "> Padding <span style="color: orangered;"> Pack</span></span>
+                </div>
+                <a href="#" class="mobile-nav__toggler" style="float: right; position: relative ; transform: translateY(-60px);">
+                    <span></span>
+                </a>
+                <div class="main-menu-wrapper__main-menu" style="padding-right: 0%;">
+                    <ul class="main-menu__list one-page-scroll-menu">
+                        <li class=" scrollToLink p" >
+                            <a href="{% url 'main:home' %}" style="font-weight: bold;"> {% trans 'Home' %} </a>
+                        </li>
+                        <li class="scrollToLink"><a href="{% url 'main:about' %}" style="font-weight: bold;"> {% trans 'About' %} </a></li>
+                        <li class="scrollToLink"><a href="#products" style="font-weight: bold;"> {% trans 'Products' %} </a></li>
+                        <li class="scrollToLink"><a href="#contact" style="font-weight: bold;"> {% trans 'Contact' %} </a></li>
+                        <li class="scrollToLink">
+                            <!-- <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+                                <input name="next" type="hidden" value="{{ redirect_to }}">
+                                <select name="language" onchange="this.form.submit()" class="custom-select" style="background: none; border: none; color: white; font-weight: bold;">
+                                    {% get_current_language as LANGUAGE_CODE %}
+                                    {% get_available_languages as LANGUAGES %}
+                                    {% get_language_info_list for LANGUAGES as languages %}
+                                    {% for language in languages %}
+                                        <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                                             {{ language.code }}
+                                        </option>
+                                    {% endfor %}
+                                </select>
+                            </form> -->
+
+
+                            <form action="{% url 'set_language' %}" method="post">
+                                {% csrf_token %}
+                                <input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}" />
+                                <select name="language"  onchange="this.form.submit()" class="custom-select" style="background: none; border: none; color: white; font-weight: bold; text-transform: uppercase;">
+                                  {% get_language_info_list for LANGUAGES as languages %}
+                                    {% for language in languages %}
+                                        <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}  style="text-transform: uppercase;">
+                                             {{ language.code }}
+                                        </option>
+                                    {% endfor %}
+                                </select>
+                                <!-- <input type="submit" value="Change" /> -->
+                              </form>
+
+
+
+                            
+                        </li>
+                        <li class="scrollLink id_phone">
+                            <div class="main-menu-wrapper__right-contact-box">
+                                <div class="main-menu-wrapper__right-contact-icon">
+                                    <span class="icon-phone-call"></span> 
+                                </div>
+                                <span class="" style="font-size: 21px; color: whitesmoke; font-weight: bold;"> (+99890) 8996864</span> 
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+</header>
+
+
+        <div class="stricky-header stricked-menu main-menu">
+            <div class="sticky-header__content"></div><!-- /.sticky-header__content -->
+        </div><!-- /.stricky-header -->
+
+        <!--Page Header Start-->
+        <!-- <section class="page-header" style="background-image: url(/static/assets/images/bg2.jpg);">
+            <div class="page-header-shape-1"></div>
+            <div class="page-header-shape-2"></div>
+            <div class="container">
+                <div class="page-header__inner">
+                    <ul class="thm-breadcrumb list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><span>.</span></li>
+                        <li>About us</li>
+                    </ul>
+                    <h2>About us</h2>
+                </div>
+            </div>
+        </section> -->
+        <!--Page Header End-->
+
+        <!--Reasons Start-->
+
+        <section class="reasons"  style="display: flex;justify-content: center; padding-bottom: 30px;">
+            <div class="container" style="margin-left: 5px;margin-right:5px; width: 100%; padding-top: 50px; padding-bottom: 0%;">
+                <div class="row" >
+                    <div class="col-xl-4 col-lg-4 pt-5"  >
+                        <div class="reasons__left" style="margin: 0;">
+                            <div class="reasons__img" style="align-items: center; padding: 25px;">
+                                <img src="{{object.image.url}}" alt="">
+                                <div class="reasons__img-shape-1"></div>
+                                <div class="reasons__img-shape-2"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-8 col-lg-8">
+                        <div class="reasons__right">
+                            <div class="section-title text-left">
+                                <span class="section-title__tagline" style="color: #fc653c;"> {% trans 'category name ' %} </span>
+                                <h2 class="section-title__title" id="object_name" style="font-weight: bold; font-size: 30px;"> {{object.name}} </h2>
+                            </div>
+                            <p class="reasons__text" style=" color: black; font-weight: bold; "> {{object.description |safe}} </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {% if object.items.all.count %}                    
+         <section class="products" id="additional">
+            <div class="container ">
+                    <h4 class="addtional_item" style=" font-size: 18px; font-weight: 600; transform: translateX(15px); "> {{object.additional}} </h4> <br>    
+            <center>
+                <div class="hr" style="height: 2px; background-color: orangered; width: 60%;">  </div>
+            </center>
+                <div class="row pt-3" style="text-align: left;">
+                        <ul class="items pt-3" >
+                            {% for item in object.items.all %}
+                              <li> {{item.name}} </li>
+                            {% endfor %}
+                        </ul>        
+                    </div>
+                </div>
+            </section> 
+            {% endif %}
+        
+
+
+
+
+            <section class="products" id="products">
+                {% if object.products.all.count %}                        
+            <div class="container " style="">
+                    <div class="row pt-3" style="text-align: left; display: flex; justify-content: center;">
+                        {% for product in object.products.all %}
+                        <!-- <div class="col-xl-4 col-lg-4 col-sm-12 col-12 card_outer pt-3 text-center" style="box-sizing: border-box; padding: 0px 0px 0px 5px; display: flex; justify-content: center;">
+                            <div style="width: 85%;height: 90%; min-height: 90%; padding-top: 25px; border-radius: 15px;" >
+                                <a href="{% url 'main:product_detail' product.id %}" style="background-color: orange; " >
+                                    <div class="img_outer" style="height: 70%; min-height: 70%;">
+                                        <img class="card-img-top" src="{{product.image.url}}" alt="Card image" style="width: 70%; height: 100%; min-height: 190px;">
+                                    </div>
+                                    <div class="card-body" style="height: 30%; max-height: 30%;">
+                                          <h4 class="card-title" style="font-weight: bold;">{{category.name}}</h4>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>  -->
+
+
+
+                        <div class="col-xl-3 col-lg-3 col-sm-12 col-12 card_outer pt-3 text-center" style="box-sizing: border-box; padding: 0px 0px 0px 5px; display: flex; justify-content: center;">
+                            <div style="width: 85%;height: 90%; min-height: 90%; padding-top: 25px; border-radius: 15px;" >
+                                <a href="{% url 'main:product_detail' product.id %}" style="background-color: orange; " >
+                                    <div class="img_outer" style="height: 60%; min-height: 60%; max-height: 60%;">
+                                        <img class="card-img-top" src="{{product.image.url}}" alt="Card image" style="width: 70%;  min-height: 140px; max-height: 70%;">
+                                    </div>
+                                    <div class="card-body" style="height: 40%; max-height: 40%;">
+                                          <h4 class="card-title pt-2" style="font-weight: bold; font-size:16px;">{{product.name}}</h4>
+                                    </div>
+                                </a>
+                            </div>
+                        </div> 
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+
+            
+            {% if object.images.all.count %}
+            <div class="container pt-5 " ">
+                <div class="row" style=" display: flex; justify-content: center;">
+                    {% for image in object.images.all  %}
+                    <div class="col-md-3 col-sm-6 col-lg-3">
+                        <img src="{{image.image.url}}" alt="">
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+        </section>
+         
+
+
+
+        <!--Reasons End-->
+
+        <!--Counter One Start-->
+
+        <!--Counter One End-->
+
+        <!--We Change Start-->
+
+        <!--We Change End-->
+
+        <!--Testimonial One Start-->
+
+        <!--Testimonial One End-->
+
+        <!--Video One Start-->
+
+        <!--Video One End-->
+
+        <!--Team One Start-->
+
+        <!--Team One End-->
+
+        <!--Brand Two-->
+
+        <!--Brand Two End-->
+
+        <!--Site Footer One Start-->
+
+        <!--Site Footer One End-->
+
+
+    </div><!-- /.page-wrapper -->
+
+
+
+    <!-- /.mobile-nav__wrapper -->
+
+    <!-- /.search-popup -->
+
+
+
+
+
+
+
+
+
+    <style>
+        	.outer_block__card{background-color: rgba(252, 155, 15, 0.4);}
+	/* .outer_a:hover .outer_block__card{ */
+		/* transform: scale(1.05); */
+		/* transition: ease 1s; */
+		/* background-color: rgba(255,179,71);		 */
+/* } */
+        .reasons__text{
+            font-size: 17px;
+            line-height: 27px;
+            letter-spacing: 0.1px;
+        }
+        .section-title__title{
+            font-size: 25px;
+        }
+
+
+
+    </style>
+
+<style>
+    #brand__text{color: white; font-size: 30px;font-weight: bold;}
+    .outer_block__card{background-color: rgba(255,179,71, 0.5);}
+    .outer_a:hover .outer_block__card{transform: scale(1.05);transition: ease 1s;background-color: rgba(255,179,71);		}
+    .main_paddingpack{width: 25%;}
+    .outer{padding-left: 20px;padding-right: 20px;}
+    .main_home__img{width: 80%;}
+    .site-footer-top-bg{padding: 0%;}
+    #padding_pack__logo{width: 18%; }
+    .padding{font-size: 90px;line-height: 5rem;}
+    .main-menu-wrapper__main-menu{ width: 82%; }
+    .language_code{border: none;background: none;font-weight: bold;color: white;text-transform: uppercase;border-right: 1px solid black;}
+    /* .a_outer{background-color: rgba(255,165,0, 0.7); width: 95%; height: 95%; padding-top: 15px; border-radius: 15px; padding-bottom: 5px;} */
+    /* .a_outer:hover{ transition: all ease-in 0.4s; background-color: orange;} */
+	.card_outer > div {background-color: rgba(255,179,71, 0.8); }
+	.card_outer > div:hover { transition: all 0.5s; background-color: rgba(255,179,20, 1);}
+
+
+    /* Mobile */
+    @media only screen and (max-width: 860px ) {
+    .padding{font-size: 70px;line-height: 3.7rem;}
+    /* .additional_text{display: none;}	 */
+    .main-slider{padding-top: 250px;}
+    .outer{padding-top: 150px;}
+    .main_home__img{width: 95%;max-width: 450px;}
+    #brand__text{display: none;}
+    #padding_pack__logo{width: 70px;padding-top: 10px;}
+    .main_paddingpack{width: 100%;}
+    .prod_of_cg{display: none;}
+    .id_phone{display: none;}
+    .addtional_item{font-size: 20px;}
+    card-title{padding-top: 25px;}
+    
+}
+
+
+
+
+    @media only screen and (min-width: 920px) {
+        .padding{font-size: 60px;line-height: 5rem;}
+}
+
+    .main-slider{background-color: darkslategray;height: 100vh;max-height: 100vh;overflow: hidden;}
+    /* .scrollToLink{ */
+        /* margin: 0%  !important;  */
+    /* } */
+
+    </style>
+
+
+
+
+
+
+<style>
+    ul.items {
+      list-style: none;
+      font-weight: bold;
+      color: black;
+      text-align: left;
+  }
+    ul.items li::before {
+    content: "🔴";
+    margin-right: 0.5rem;
+    color: #ff6f00;
+    font-weight: bold;
+  }
+  
+  </style>
+           
+
+
+    <!-- https://dev.to/selbekk/how-to-overlay-your-background-images-59le -->
+    {% endblock content %}
