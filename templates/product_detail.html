@@ -302,7 +302,6 @@ setTimeout(() => {
         
                          <input type="number" name="product" value="{{object.id}}"  hidden>
                          <input type="text" name="image" value="{{object.image.url}}"  hidden>
-                         <input type="text" name="sizing" value="{{object.sizing}}"  hidden>
                         </div>
                     </div>
                     <div class="row pt-3">
@@ -323,7 +322,7 @@ setTimeout(() => {
                         </div>
                         <div class="col-xl-6">
                             <div class="comment-form__input-box">
-                                <input class="amount" type="number" placeholder=" {% trans 'Quantity' %}{{object.sizing}}"  style="background-color: #f1f1f5; border-radius: 30px; color: #717178;" name="amount">
+                                <input class="amount" type="number" placeholder=" {% trans 'Quantity' %} ({{object.sizing}})"  style="background-color: #f1f1f5; border-radius: 30px; color: #717178;" name="amount">
                             </div>
                         </div>
                     </div>
