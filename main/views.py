@@ -23,7 +23,7 @@ class HomePageView(View):
 		phone = request.POST["phone"]
 		message  = request.POST["message"]
 		client_message = ClientMessage.objects.create( name=name, phone=phone, email=email, message=message)
-		telegram_bot_sendtext(f"  ClientMessage  \n\n Name: {name} \n\n Email :  {email}  \n\n Phone: +{phone} \n\n Link: http://192.168.1.86:8080/admin/main/clientmessage/{client_message.id}/change")
+		telegram_bot_sendtext(f"  ClientMessage  \n Name: {name} \n Email :  {email}  \n Phone: +{phone} \n Link: https://paddingpack.uz/admin/main/clientmessage/{client_message.id}/change")
 		messages.success(request, _("Your message was successfully submitted, please wait our call !"))
 		
 		return redirect(f'/') 
@@ -77,7 +77,7 @@ class ProductDetailView(View):
 		message = request.POST['message']
 	
 		order = Order.objects.create(product=product, amount=amount, name=name, phone=phone, email=email, message=message, additional_info=additional_data)
-		telegram_bot_sendtext(f"  \n  Product: {product.name} \n Name :  {name} \n Amount: {amount} \n Phone: {phone} \n Link: http://192.168.1.86:8080/admin/main/order/{order.id}/change")
+		telegram_bot_sendtext(f"  \n  Product: {product.name} \n Name :  {name} \n Amount: {amount} \n Phone: {phone} \n Link: https://paddingpack.uz/admin/main/order/{order.id}/change")
 
 		messages.success(request, _("Your order was successfully submitted, please wait our call ! !"))
 		return redirect(f'/product/{pk}') 

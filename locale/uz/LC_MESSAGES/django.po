@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-16 00:10+0000\n"
+"POT-Creation-Date: 2022-02-18 21:58+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,28 +20,28 @@ msgstr ""
 
 #: Trash/trash.txt:87 Trash/trash.txt:148 templates/about.html:21
 #: templates/about.html:97 templates/category_detail.html:19
-#: templates/index.html:64 templates/product_detail.html:19
+#: templates/index.html:64 templates/product_detail.html:61
 #: templates/wrapper.html:129 trash.txt:87 trash.txt:148
 msgid "Home"
 msgstr "Bosh Sahifa"
 
 #: Trash/trash.txt:89 Trash/trash.txt:150 templates/about.html:23
 #: templates/category_detail.html:21 templates/index.html:66
-#: templates/product_detail.html:21 templates/wrapper.html:132 trash.txt:89
+#: templates/product_detail.html:63 templates/wrapper.html:132 trash.txt:89
 #: trash.txt:150
 msgid "About"
 msgstr "Haqimizda "
 
 #: Trash/trash.txt:90 Trash/trash.txt:151 templates/about.html:24
-#: templates/category_detail.html:22 templates/index.html:67
-#: templates/product_detail.html:22 templates/wrapper.html:135 trash.txt:90
-#: trash.txt:151
+#: templates/category_detail.html:22 templates/category_detail.html:147
+#: templates/index.html:67 templates/product_detail.html:64
+#: templates/wrapper.html:135 trash.txt:90 trash.txt:151
 msgid "Products"
 msgstr " Mahsulotlar"
 
 #: Trash/trash.txt:91 Trash/trash.txt:152 templates/about.html:25
 #: templates/category_detail.html:23 templates/index.html:68
-#: templates/product_detail.html:23 templates/wrapper.html:117
+#: templates/product_detail.html:65 templates/wrapper.html:117
 #: templates/wrapper.html:138 trash.txt:91 trash.txt:152
 msgid "Contact"
 msgstr "Aloqa"
@@ -50,7 +50,7 @@ msgstr "Aloqa"
 msgid "Your message was successfully submitted, please wait our call !"
 msgstr "Xabaringiz muvaffaqiyatli yuborildi, qo'ng'iroqimizni kuting!"
 
-#: main/views.py:74
+#: main/views.py:82
 msgid "Your order was successfully submitted, please wait our call ! !"
 msgstr "Buyurtmangiz muvaffaqiyatli topshirildi, qo'ng'iroqimizni kuting!"
 
@@ -71,6 +71,10 @@ msgstr "Kompaniya Haqida"
 #: templates/category_detail.html:112
 msgid "category name "
 msgstr "categoriya nomi"
+
+#: templates/category_detail.html:188
+msgid " Gallery"
+msgstr ""
 
 #: templates/index.html:145 templates/index.html:191
 msgid "Production of corrugated packaging"
@@ -114,19 +118,19 @@ msgstr "Aloqa"
 msgid "Get in touch with the agency"
 msgstr "Biz Bilan Boglaning"
 
-#: templates/index.html:275 templates/product_detail.html:280
+#: templates/index.html:275 templates/product_detail.html:310
 msgid "Your name"
 msgstr "Ismingiz"
 
-#: templates/index.html:280 templates/product_detail.html:285
+#: templates/index.html:280 templates/product_detail.html:315
 msgid "Email Address"
 msgstr "Emailingiz"
 
-#: templates/index.html:285 templates/product_detail.html:290
+#: templates/index.html:285 templates/product_detail.html:320
 msgid "Phone number"
 msgstr "Telefon raqamingiz"
 
-#: templates/index.html:292 templates/product_detail.html:302
+#: templates/index.html:292 templates/product_detail.html:332
 msgid "Write Message"
 msgstr "Habar "
 
@@ -134,31 +138,27 @@ msgstr "Habar "
 msgid "Send a message"
 msgstr "Jo'natish"
 
-#: templates/product_detail.html:165
+#: templates/product_detail.html:195
 msgid "product name "
 msgstr "tovar nomi"
 
-#: templates/product_detail.html:205 templates/product_detail.html:305
+#: templates/product_detail.html:236 templates/product_detail.html:335
 msgid "Order"
 msgstr ""
 
-#: templates/product_detail.html:212
+#: templates/product_detail.html:243
 #, fuzzy
 #| msgid "Our Products"
 msgid "Order product"
 msgstr "Bizning Mahsulotlar"
 
-#: templates/product_detail.html:295
+#: templates/product_detail.html:325
 msgid "Quantity"
 msgstr ""
 
 #: templates/wrapper.html:126
 msgid "Navigation"
-msgstr "Navigatiya"
-
-#: templates/wrapper.html:145
-msgid "Website"
-msgstr ""
+msgstr "Navigatsiya"
 
 #~ msgid "Creators"
 #~ msgstr "Yaratuvchilar"

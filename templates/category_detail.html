@@ -120,9 +120,9 @@
         </section>
 
         {% if object.items.all.count %}                    
-         <section class="products" id="additional">
+         <section class="products pt-4" id="additional">
             <div class="container ">
-                    <h4 class="addtional_item" style=" font-size: 18px; font-weight: 600; transform: translateX(15px); "> {{object.additional}} </h4> <br>    
+                    <h4 class="addtional_item" style=" font-size: 18px; font-weight: 600;  "> {{object.additional}}:</h4> <br>    
             <center>
                 <div class="hr" style="height: 2px; background-color: orangered; width: 60%;">  </div>
             </center>
@@ -141,9 +141,13 @@
 
 
 
-            <section class="products" id="products">
+            <section class="products pt-5" id="products">
                 {% if object.products.all.count %}                        
-            <div class="container " style="">
+            <div class="container pt-3" style="">
+                <h4 class="addtional_item" style=" font-size: 18px; font-weight: 600; "> {% trans 'Products' %}:</h4> <br>    
+                <center>
+                    <div class="hr" style="height: 2px; background-color: orangered; width: 60%;">  </div>
+                </center>
                     <div class="row pt-3" style="text-align: left; display: flex; justify-content: center;">
                         {% for product in object.products.all %}
                         <!-- <div class="col-xl-4 col-lg-4 col-sm-12 col-12 card_outer pt-3 text-center" style="box-sizing: border-box; padding: 0px 0px 0px 5px; display: flex; justify-content: center;">
@@ -180,11 +184,15 @@
 
             
             {% if object.images.all.count %}
-            <div class="container pt-5 " ">
-                <div class="row" style=" display: flex; justify-content: center;">
+            <div class="container pt-5 " >
+                <h4 class="addtional_item" style=" font-size: 18px; font-weight: 600; "> {% trans ' Gallery' %} </h4>
+                <center class="pt-2">
+                    <div class="hr" style="height: 2px; background-color: orangered; width: 60%;">  </div>
+                </center>
+                <div class="row text-center pt-4 category_images_section" style=""  >
                     {% for image in object.images.all  %}
-                    <div class="col-md-3 col-sm-6 col-lg-3">
-                        <img src="{{image.image.url}}" alt="">
+                    <div class="col-md-3 col-sm-6 col-lg-3" style="box-sizing: border-box;">
+                        <img src="{{image.image.url}}" alt="" style="width: 100%;">
                     </div>
                     {% endfor %}
                 </div>
@@ -280,6 +288,11 @@
 	.card_outer > div:hover { transition: all 0.5s; background-color: rgba(255,179,20, 1);}
 
 
+
+
+    .addtional_item{padding-left: 35px;}
+    .category_images_section{ padding-left: 100px;  padding-right: 100px;}
+
     /* Mobile */
     @media only screen and (max-width: 860px ) {
     .padding{font-size: 70px;line-height: 3.7rem;}
@@ -292,9 +305,10 @@
     .main_paddingpack{width: 100%;}
     .prod_of_cg{display: none;}
     .id_phone{display: none;}
-    .addtional_item{font-size: 20px;}
+    .addtional_item{font-size: 20px; text-align: center;}
     card-title{padding-top: 25px;}
-    
+    .category_images_section{ padding-left: 10px;  padding-right: 10px;}
+
 }
 
 
