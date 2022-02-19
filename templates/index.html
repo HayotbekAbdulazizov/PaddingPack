@@ -85,10 +85,10 @@ setTimeout(() => {
                             <form action="{% url 'set_language' %}" method="post" >
                                 {% csrf_token %}
                                 <input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}" />
-                                <select name="language"  onchange="this.form.submit()" class="custom-select" style="background: none; border: none; color: white; font-weight: bold; text-transform: uppercase;">
+                                <select name="language"  onchange="this.form.submit()" class="custom-select language__code" style="  background: none; border: none; font-weight: bold; text-transform: uppercase;">
                                   {% get_language_info_list for LANGUAGES as languages %}
                                     {% for language in languages %}
-                                        <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}  style="text-transform: uppercase;">
+                                        <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}   class="language__code" >
                                              {{ language.code }}
                                         </option>
                                     {% endfor %}
@@ -108,9 +108,6 @@ setTimeout(() => {
                                 <span class="" style="font-size: 21px; color: whitesmoke; font-weight: bold;"> (+99890) 8996864 </span> 
                             </div>
                         </li>
-                        <!-- {% if request.user.is_superuser %}	 -->
-                        <!-- <li class="scrollToLink"><a href="{% url 'admin:index' %}" style="font-weight: bold;">Admin</a></li> -->
-                        <!-- {% endif %} -->
                     </ul>
                 </div>
                 <!-- <div class="main-menu-wrapper__right"> -->
