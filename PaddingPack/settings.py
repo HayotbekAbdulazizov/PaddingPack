@@ -41,7 +41,6 @@ INSTALLED_APPS = [
 
     'main',
     'parler',
-    # 'ckeditor'
 ]
 
 MIDDLEWARE = [

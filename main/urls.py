@@ -16,15 +16,7 @@ urlpatterns = [
 	
 
 	path('error/', views.ErrorPageView.as_view(), name='error'),
-	# path('get_order/', views.get_order, name='get_order'),
 ]
 
 
-# urlpatterns += i18n_patterns(
-# 	path('',views.HomePageView.as_view(), name='home'),
-# 	path('about/',views.AboutPageView.as_view(), name='about'),
-# 	path('category/<pk>', views.CategoryDetailView.as_view(), name='category_detail'),
-# 	path('product/<pk>', views.ProductDetailView.as_view(), name='product_detail'),
-	
-# )
 

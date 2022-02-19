@@ -1,9 +1,7 @@
-from re import template
 from .models import *
 from django.views.generic import DetailView, TemplateView, View
 from django.shortcuts import redirect, render
 from .tg_sender import telegram_bot_sendphoto, telegram_bot_sendtext
-from django.http import HttpResponse
 from django.utils.translation import gettext as _
 from django.contrib import messages
 

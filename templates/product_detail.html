@@ -6,11 +6,6 @@
 
 
 <style>
-	/* div.alert{
-		 contain: content;
-		justify-content: center;
-   } */
-
 div.alert-success {
  position: fixed;
  top: 0;
@@ -106,19 +101,8 @@ setTimeout(() => {
                                      </span> 
                             </div>
                         </li>
-                        <!-- {% if request.user.is_superuser %}	 -->
-                        <!-- <li class="scrollToLink"><a href="{% url 'admin:index' %}" style="font-weight: bold;">Admin</a></li> -->
-                        <!-- {% endif %} -->
                     </ul>
                 </div>
-                <!-- <div class="main-menu-wrapper__right"> -->
-                    <!-- <div class="main-menu-wrapper__right-contact-box">
-                        <div class="main-menu-wrapper__right-contact-icon">
-                            <span class="icon-phone-call"></span> 
-                        </div>
-                        <span class="" style="font-size: 21px; color: whitesmoke; font-weight: bold;"> +998916020335 </span> 
-                    </div> -->
-                <!-- </div> -->
             </div>
         </nav>
 </header>
@@ -128,25 +112,6 @@ setTimeout(() => {
             <div class="sticky-header__content"></div><!-- /.sticky-header__content -->
         </div><!-- /.stricky-header -->
 
-        <!--Page Header Start-->
-        <!-- <section class="page-header" style="background-image: url(/static/assets/images/bg2.jpg);">
-            <div class="page-header-shape-1"></div>
-            <div class="page-header-shape-2"></div>
-            <div class="container">
-                <div class="page-header__inner">
-                    <ul class="thm-breadcrumb list-unstyled">
-                        <li><a href="index.html">Home</a></li>
-                        <li><span>.</span></li>
-                        <li>About us</li>
-                    </ul>
-                    <h2>About us</h2>
-                </div>
-            </div>
-        </section> -->
-        <!--Page Header End-->
-
-        <!--Reasons Start-->
-
         <section class="reasons"  style="display: flex;justify-content: center; padding-bottom: 30px;">
             <div class="container" style="margin-left: 5px;margin-right:5px; width: 100%; padding-top: 50px; padding-bottom: 0%;">
                 <div class="row" >
@@ -154,12 +119,6 @@ setTimeout(() => {
                         <div class="reasons__left" style="margin: 0;">
                             <div class="reasons__img" style="align-items: center; padding: 25px;">
                                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-
-                                    <!-- <ol class="carousel-indicators"> -->
-                                    <!-- <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li> -->
-                                      <!-- <li data-target="#carouselExampleIndicators" data-slide-to="1"></li> -->
-                                      <!-- <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> -->
-                                    <!-- </ol> -->
 
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
@@ -196,33 +155,6 @@ setTimeout(() => {
                                 <h2 class="section-title__title" id="object_name" style="font-weight: bold; font-size: 30px;"> {{object.name}} </h2>
                             </div>
                             <p class="reasons__text" style=" color: black; font-weight: bold; "> {{object.description |safe}} </p>
-                            <!-- <p class="reasons__text" style=" color: black; font-weight: bold; "> {{object.description |safe}} </p> -->
-                            <!-- <ul class="list-unstyled reasons__list">
-                                <li>
-                                    <div class="icon">
-                                        <span class="icon-tick"></span>
-                                    </div>
-                                    <div class="text">
-                                        <p>Highly trained in administrative tasks</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="icon">
-                                        <span class="icon-tick"></span>
-                                    </div>
-                                    <div class="text">
-                                        <p>Professionally managed and supported</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="icon">
-                                        <span class="icon-tick"></span>
-                                    </div>
-                                    <div class="text">
-                                        <p>Proficient in google, and most productivity suites</p>
-                                    </div>
-                                </li>
-                            </ul> -->
                         </div>
                     </div>
                 </div>
@@ -246,51 +178,6 @@ setTimeout(() => {
           </button>
         </div>
         <div class="modal-body">
-
-          <!-- <form action="" method="POST">
-              {% csrf_token %}
-              <div class="displayflex" style="display: flex; justify-content: space-around;">
-                <img src="{{object.image.url}}" style="width: 30%; height: 30%;" alt="">
-                <div class="outer_heading" style="text-align: center; display: flex; flex-direction: column; vertical-align: middle; padding-right: 20px;">
-                <h4 style="font-weight: bold; font-size: 100%; "> {{object.name}} </h4>
-                 <li style="font-weight: bold; font-size: 60%; color: orangered;  "> {{object.category.name}} </li>
-
-                 <input type="number" name="product" value="{{object.id}}"  id="">
-                 <input type="text" name="image" value="{{object.image.url}}"  id="">
-                </div>
-        </div>
-
-            <input type="number" name="{{object.id}}" value="{{object.id}}" id="">
-            <input type="text" name="name" id="">
-            <button type="submit">  SEnd </button>
-            </form>  -->
-
-            <!-- <form action="" method="POST">
-                {% csrf_token %}
-                <div class="displayflex" style="display: flex; justify-content: space-around;">
-                    <img src="{{object.image.url}}" style="width: 30%; height: 30%;" alt="">
-                    <div class="outer_heading" style="text-align: center; display: flex; flex-direction: column; vertical-align: middle; padding-right: 20px;">
-                    <h4 style="font-weight: bold; font-size: 100%; "> {{object.name}} </h4>
-                     <li style="font-weight: bold; font-size: 60%; color: orangered;  "> {{object.category.name}} </li>
-    
-                     <input type="number" name="product" value="{{object.id}}"  hidden>
-                     <input type="text" name="image" value="{{object.image.url}}"  hidden>
-                    </div>
-                </div>
-
-                    <input type="text" name="name" placeholder="Enter your Name"    >
-                    <input type="email" name="email" placeholder="Enter your Email">
-                    <input type="text" name="phone"  placeholder="+ ">
-                    <input type="number" value="1" name="amount" min="1" >
-                    {% for input in object.form_input.all %}
-                        <input type="{{input.type}}" name="{{input.name}}"  {% if input.type == 'text' %} placeholder="{{input.placeholder}}" {% endif %}>
-                    {% endfor %}
-                    <textarea name="message" cols="30" rows="3"></textarea>
-                    <button type="submit"> send </button>
-            </form> -->
-
-
-
             <div class="contact-page__form contact-page__form--one-page">
                 <form action="" class="comment-one__form " method="POST">
                     {% csrf_token %}
@@ -344,38 +231,6 @@ setTimeout(() => {
   </div>
 
 
-
-        <!--Reasons End-->
-
-        <!--Counter One Start-->
-
-        <!--Counter One End-->
-
-        <!--We Change Start-->
-
-        <!--We Change End-->
-
-        <!--Testimonial One Start-->
-
-        <!--Testimonial One End-->
-
-        <!--Video One Start-->
-
-        <!--Video One End-->
-
-        <!--Team One Start-->
-
-        <!--Team One End-->
-
-        <!--Brand Two-->
-
-        <!--Brand Two End-->
-
-        <!--Site Footer One Start-->
-
-        <!--Site Footer One End-->
-
-
     </div><!-- /.page-wrapper -->
 
 
@@ -384,26 +239,6 @@ setTimeout(() => {
 
     <!-- /.search-popup -->
 
- <!-- <br><br><br><br><br>
- <form action="" method="POST">
-    {% csrf_token %}
-    <div class="displayflex" style="display: flex; justify-content: space-around;">
-      <img src="{{object.image.url}}" style="width: 30%; height: 30%;" alt="">
-      <div class="outer_heading" style="text-align: center; display: flex; flex-direction: column; vertical-align: middle; padding-right: 20px;">
-      <h4 style="font-weight: bold; font-size: 100%; "> {{object.name}} </h4>
-       <li style="font-weight: bold; font-size: 60%; color: orangered;  "> {{object.category.name}} </li>
-
-       <input type="number" name="product" value="{{object.id}}"  id="">
-       <input type="text" name="image" value="{{object.image.url}}"  id="">
-      </div>
-</div>
-
-  <input type="number" name="{{object.id}}" value="{{object.id}}" id="">
-  <input type="text" name="name" id="">
-  <button type="submit">  SEnd </button>
-  </form> -->
-
-
 
 
 
@@ -411,11 +246,6 @@ setTimeout(() => {
 
     <style>
         	.outer_block__card{background-color: rgba(252, 155, 15, 0.4);}
-	/* .outer_a:hover .outer_block__card{ */
-		/* transform: scale(1.05); */
-		/* transition: ease 1s; */
-		/* background-color: rgba(255,179,71);		 */
-/* } */
         .reasons__text{
             font-size: 17px;
             line-height: 27px;
@@ -448,7 +278,6 @@ setTimeout(() => {
     /* Mobile */
     @media only screen and (max-width: 860px ) {
     .padding{font-size: 70px;line-height: 3.7rem;}
-    /* .additional_text{display: none;}	 */
     .main-slider{padding-top: 250px;}
     .outer{padding-top: 150px;}
     .main_home__img{width: 95%;max-width: 450px;}
@@ -470,9 +299,6 @@ setTimeout(() => {
 }
 
     .main-slider{background-color: darkslategray;height: 100vh;max-height: 100vh;overflow: hidden;}
-    /* .scrollToLink{ */
-        /* margin: 0%  !important;  */
-    /* } */
 
     input[type="number"]{
     width: 100%;
@@ -486,11 +312,4 @@ setTimeout(() => {
 
     </style>
 
-
-
-
-
-
-
-    <!-- https://dev.to/selbekk/how-to-overlay-your-background-images-59le -->
     {% endblock content %}

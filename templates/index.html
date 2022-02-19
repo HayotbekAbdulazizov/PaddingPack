@@ -7,11 +7,6 @@
 
 
 <style>
-	/* div.alert{
-		 contain: content;
-		justify-content: center;
-   } */
-
 div.alert-success {
  position: fixed;
  top: 0;
@@ -93,7 +88,6 @@ setTimeout(() => {
                                         </option>
                                     {% endfor %}
                                 </select>
-                                <!-- <input type="submit" value="Change" /> -->
                               </form>
 
 
@@ -110,14 +104,6 @@ setTimeout(() => {
                         </li>
                     </ul>
                 </div>
-                <!-- <div class="main-menu-wrapper__right"> -->
-                    <!-- <div class="main-menu-wrapper__right-contact-box">
-                        <div class="main-menu-wrapper__right-contact-icon">
-                            <span class="icon-phone-call"></span> 
-                        </div>
-                        <span class="" style="font-size: 21px; color: whitesmoke; font-weight: bold;"> +998916020335 </span> 
-                    </div> -->
-                <!-- </div> -->
             </div>
         </nav>
 </header>
@@ -140,13 +126,8 @@ setTimeout(() => {
 						<div class="outer_text">
 							<div class="padding text-center" style="color: white; font-weight: bold; font-family: Verdana, Geneva, Tahoma, sans-serif; "> Padding <br> <span style="color: orangered;">Pack</span> 
 								<div class="text-center prod_of_cg" style="position: absolute; transform: translate(50px, -35px);"> <span style="font-size: 15px; color: whitesmoke;">{% trans 'Production of corrugated packaging' %} </span></div>
-								<!-- <span class="additional_text" style="font-size: 20px;"> 
-									г. Ташкент, Сергелийский район, южная промзона, 154
-									(+99897) 4203568; (+99893) 3911171
-									rammet90@mail.ru							
 								</span> -->
 							</div>
-							<!-- <div class="phone mt-5 ml-5 " style="width: 200px;"><i class="fas fa-phone-square-alt" style="width: 30px;height: 30px;font-size: 25px; color: darkorange;background-color: #fff;"></i> <span> (+99897) 4203568 </span> </div> -->
 						</div>
 					</div>
 					<div class="col-md-12 col-lg-6 col-sm-12 col-xl-6 pt-5 mt-5" style="padding: 0;">	
@@ -219,22 +200,6 @@ setTimeout(() => {
 				<div class="row text-center" style="transform: translateX(18px);"> 
 					
 					{% for category in categories %}						
-					<!-- <div class="col-xl-4 col-lg-4 col-sm-12 col-12 card_outer" style="box-sizing: border-box; padding: 65px 0px 0px 5px;">
-						<a href="{% url 'main:category_detail' category.id %}" class="outer_a text-center">
-						<div class="outer_block__card"  style=" border-radius: 15px; padding-top:25px; width: 90%; height: 100%;"> 	
-						<div class="card text-center " style="align-items: center;background: none;border: none;">
-							<div class="img_outer" style="height: 70%;">
-								<img class="card-img-top" src="{{category.image.url}}" alt="Card image" style="width: 70%; min-height: 190px;">
-							</div>
-							<div class="card-body" style="height: 30%;">
-							  <h4 class="card-title" style="font-weight: bold;">{{category.name}}</h4>
-							</div>
-						  </div>
-						</div>
-					</a>
-					</div> -->
-
-
 					 <div class="col-xl-4 col-lg-4 col-sm-12 col-12 card_outer pt-3" style="box-sizing: border-box; padding: 0px 0px 0px 5px;">
 						<div style="width: 85%;height: 90%; min-height: 90%; padding-top: 25px; border-radius: 15px;" >
 							<a href="{% url 'main:category_detail' category.id %}" style="background-color: orange; " >
@@ -297,9 +262,6 @@ setTimeout(() => {
 						</div>
 					</div>
 					<div class="col-xl-6 iframe">
-						<!-- <iframe
-						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4562.753041141002!2d-118.80123790098536!3d34.152323469614075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80e82469c2162619%3A0xba03efb7998eef6d!2sCostco+Wholesale!5e0!3m2!1sbn!2sbd!4v1562518641290!5m2!1sbn!2sbd"
-						class="google-map__one" allowfullscreen></iframe>   -->
 						<iframe width="600" height="450" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJPd-2guVnrjgR7ReMa26jOUs&key=AIzaSyANJiysLYjIDVA6R0_jSYDs57O7GK_Z_Ok"></iframe>
 					</div>
 				</div>
@@ -311,107 +273,9 @@ setTimeout(() => {
 		<style>
 
 		</style>
-		<!--Services One End-->
-
-
-		<!--Portfolio One Start-->
-
-		<!--Portfolio One End-->
-
-
-		<!--Testimonial One Start-->
-
-		<!--Testimonial One End-->
-
-
-
-		<!--We Change Start-->
-
-		<!--We Change End-->
-
-
-
-		<!--Team One Start-->
-
-		<!--Team One End-->
-
-
-
-		<!--We Make Start-->
-
-		<!--We Make End-->
-
-
-
-		<!--Reasons One Start-->
-
-		<!--Reasons One End-->
-
-
-
-		<!--Blog One Start-->
-
-		<!--Blog One End-->
-
-
-
-		<!--Contact Page Google Map Start-->
-		<!--Contact Page Google Map End-->
-<!-- 		
-	<style>
-	#brand__text{color: white; font-size: 30px;font-weight: bold;}
-	.outer_block__card{background-color: rgba(255,179,71, 0.5);}
-	.outer_a:hover .outer_block__card{transform: scale(1.05);transition: ease 1s;background-color: rgba(255,179,71);		}
-	.main_paddingpack{width: 30%;}
-	.outer{padding-left: 20px;padding-right: 20px;}
-	.main_home__img{width: 80%;}
-	.site-footer-top-bg{padding: 0%;}
-	#padding_pack__logo{width: 13%; }
-	.padding{font-size: 90px;line-height: 5rem;}
-
-
-
-	/* Mobile */
-	@media only screen and (max-width: 860px ) {
-	.padding{font-size: 70px;line-height: 3.7rem;}
-	/* .additional_text{display: none;}	 */
-	.main-slider{padding-top: 250px;}
-	.outer{padding-top: 150px;}
-	.main_home__img{width: 95%;max-width: 450px;}
-	#brand__text{display: none;}
-	#padding_pack__logo{width: 70px;padding-top: 10px;}
-	.main_paddingpack{width: 100%;}
-	.prod_of_cg{display: none;}
-}
-
-
-
-
-	@media only screen and (min-width: 920px) {
-		.padding{font-size: 60px;line-height: 5rem;}
-}
-
-	.main-slider{background-color: darkslategray;height: 100	;max-height: 100vh;overflow: hidden;}
-	/* .scrollToLink{ */
-		/* margin: 0%  !important;  */
-	/* } */
-
-	</style>
- -->
-
-
-
-
-
-
-
- 		
  <style>
 	 	
 	#brand__text{color: white; font-size: 30px;font-weight: bold;}
-	/* .outer_block__card{background-color: rgba(255,179,71, 0.5);} */
-	/* .card_outer .outer_a{ background-color: orange;} */
-	/* .outer_a:hover .outer_a{transform: scale(1.05);transition: ease 1s;background-color: rgba(255,179,71);		} */
 	.card_outer > a{ background-color: orange; }
 	.main_paddingpack{width: 25%;}
 	.outer{padding-left: 20px;padding-right: 20px; padding-top: 30px;}
@@ -421,7 +285,6 @@ setTimeout(() => {
 	.padding{font-size: 90px;line-height: 5rem;}
 	.main-menu-wrapper__main-menu{ width: 82%; }
 	.language_code{border: none;background: none;font-weight: bold;color: white;text-transform: uppercase;border-right: 1px solid black;}
-	/* .card_outer{ padding-left: 50px; padding-right: 50px; } */
 	.card_outer > div {background-color: rgba(255,179,71, 0.8); }
 	.card_outer > div:hover { transition: all 0.5s; background-color: rgba(255,179,20, 1);}
 
@@ -429,7 +292,6 @@ setTimeout(() => {
 	/* Mobile */
 	@media only screen and (max-width: 860px ) {
 	.padding{font-size: 70px;line-height: 3.7rem;}
-	/* .additional_text{display: none;}	 */
 	.main-slider{padding-top: 250px;}
 	.outer{padding-top: 150px;}
 	.main_home__img{width: 95%;max-width: 450px;}
@@ -448,7 +310,6 @@ setTimeout(() => {
 		.padding{line-height: 5rem;}
 }
 
-	/* .main-slider{background-color: darkslategray;height: 100vh;max-height: 100vh;overflow: hidden;} */
 	.main-slider{background-image: url(/static/bghome.jpg);background-size: cover; height: 100vh;max-height: 100vh;overflow: hidden;background-attachment: fixed;}
 	.dark_overlay{
 		top: 0%;
@@ -458,10 +319,6 @@ setTimeout(() => {
 		background-color: rgba(0, 0, 0, 0.7);
 		position: absolute;
 	}
-	/* .scrollToLink{ */
-		/* margin: 0%  !important;  */
-	/* } */
-
 	</style>
 
 {% endblock content %}

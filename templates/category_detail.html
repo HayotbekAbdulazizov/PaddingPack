@@ -48,7 +48,6 @@
                                         </option>
                                     {% endfor %}
                                 </select>
-                                <!-- <input type="submit" value="Change" /> -->
                               </form>
 
 
@@ -75,24 +74,7 @@
             <div class="sticky-header__content"></div><!-- /.sticky-header__content -->
         </div><!-- /.stricky-header -->
 
-        <!--Page Header Start-->
-        <!-- <section class="page-header" style="background-image: url(/static/assets/images/bg2.jpg);">
-            <div class="page-header-shape-1"></div>
-            <div class="page-header-shape-2"></div>
-            <div class="container">
-                <div class="page-header__inner">
-                    <ul class="thm-breadcrumb list-unstyled">
-                        <li><a href="index.html">Home</a></li>
-                        <li><span>.</span></li>
-                        <li>About us</li>
-                    </ul>
-                    <h2>About us</h2>
-                </div>
-            </div>
-        </section> -->
-        <!--Page Header End-->
 
-        <!--Reasons Start-->
 
         <section class="reasons"  style="display: flex;justify-content: center; padding-bottom: 30px;">
             <div class="container" style="margin-left: 5px;margin-right:5px; width: 100%; padding-top: 50px; padding-bottom: 0%;">
@@ -150,21 +132,6 @@
                 </center>
                     <div class="row pt-3" style="text-align: left; display: flex; justify-content: center;">
                         {% for product in object.products.all %}
-                        <!-- <div class="col-xl-4 col-lg-4 col-sm-12 col-12 card_outer pt-3 text-center" style="box-sizing: border-box; padding: 0px 0px 0px 5px; display: flex; justify-content: center;">
-                            <div style="width: 85%;height: 90%; min-height: 90%; padding-top: 25px; border-radius: 15px;" >
-                                <a href="{% url 'main:product_detail' product.id %}" style="background-color: orange; " >
-                                    <div class="img_outer" style="height: 70%; min-height: 70%;">
-                                        <img class="card-img-top" src="{{product.image.url}}" alt="Card image" style="width: 70%; height: 100%; min-height: 190px;">
-                                    </div>
-                                    <div class="card-body" style="height: 30%; max-height: 30%;">
-                                          <h4 class="card-title" style="font-weight: bold;">{{category.name}}</h4>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>  -->
-
-
-
                         <div class="col-xl-3 col-lg-3 col-sm-12 col-12 card_outer pt-3 text-center" style="box-sizing: border-box; padding: 0px 0px 0px 5px; display: flex; justify-content: center;">
                             <div style="width: 85%;height: 90%; min-height: 90%; padding-top: 25px; border-radius: 15px;" >
                                 <a href="{% url 'main:product_detail' product.id %}" style="background-color: orange; " >
@@ -199,41 +166,6 @@
             </div>
             {% endif %}
         </section>
-         
-
-
-
-        <!--Reasons End-->
-
-        <!--Counter One Start-->
-
-        <!--Counter One End-->
-
-        <!--We Change Start-->
-
-        <!--We Change End-->
-
-        <!--Testimonial One Start-->
-
-        <!--Testimonial One End-->
-
-        <!--Video One Start-->
-
-        <!--Video One End-->
-
-        <!--Team One Start-->
-
-        <!--Team One End-->
-
-        <!--Brand Two-->
-
-        <!--Brand Two End-->
-
-        <!--Site Footer One Start-->
-
-        <!--Site Footer One End-->
-
-
     </div><!-- /.page-wrapper -->
 
 
@@ -252,11 +184,6 @@
 
     <style>
         	.outer_block__card{background-color: rgba(252, 155, 15, 0.4);}
-	/* .outer_a:hover .outer_block__card{ */
-		/* transform: scale(1.05); */
-		/* transition: ease 1s; */
-		/* background-color: rgba(255,179,71);		 */
-/* } */
         .reasons__text{
             font-size: 17px;
             line-height: 27px;
@@ -282,8 +209,6 @@
     .padding{font-size: 90px;line-height: 5rem;}
     .main-menu-wrapper__main-menu{ width: 82%; }
     .language_code{border: none;background: none;font-weight: bold;color: white;text-transform: uppercase;border-right: 1px solid black;}
-    /* .a_outer{background-color: rgba(255,165,0, 0.7); width: 95%; height: 95%; padding-top: 15px; border-radius: 15px; padding-bottom: 5px;} */
-    /* .a_outer:hover{ transition: all ease-in 0.4s; background-color: orange;} */
 	.card_outer > div {background-color: rgba(255,179,71, 0.8); }
 	.card_outer > div:hover { transition: all 0.5s; background-color: rgba(255,179,20, 1);}
 
@@ -296,7 +221,6 @@
     /* Mobile */
     @media only screen and (max-width: 860px ) {
     .padding{font-size: 70px;line-height: 3.7rem;}
-    /* .additional_text{display: none;}	 */
     .main-slider{padding-top: 250px;}
     .outer{padding-top: 150px;}
     .main_home__img{width: 95%;max-width: 450px;}
@@ -319,9 +243,6 @@
 }
 
     .main-slider{background-color: darkslategray;height: 100vh;max-height: 100vh;overflow: hidden;}
-    /* .scrollToLink{ */
-        /* margin: 0%  !important;  */
-    /* } */
 
     </style>
 
@@ -345,8 +266,4 @@
   }
   
   </style>
-           
-
-
-    <!-- https://dev.to/selbekk/how-to-overlay-your-background-images-59le -->
-    {% endblock content %}
+               {% endblock content %}
