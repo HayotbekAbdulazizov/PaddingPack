@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-18 21:58+0000\n"
+"POT-Creation-Date: 2022-02-19 23:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,38 +21,38 @@ msgstr ""
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
 #: Trash/trash.txt:87 Trash/trash.txt:148 templates/about.html:21
-#: templates/about.html:97 templates/category_detail.html:19
-#: templates/index.html:64 templates/product_detail.html:61
-#: templates/wrapper.html:129 trash.txt:87 trash.txt:148
+#: templates/about.html:85 templates/category_detail.html:19
+#: templates/index.html:59 templates/product_detail.html:56
+#: templates/wrapper.html:97 trash.txt:87 trash.txt:148
 msgid "Home"
 msgstr "Главный"
 
 #: Trash/trash.txt:89 Trash/trash.txt:150 templates/about.html:23
-#: templates/category_detail.html:21 templates/index.html:66
-#: templates/product_detail.html:63 templates/wrapper.html:132 trash.txt:89
+#: templates/category_detail.html:21 templates/index.html:61
+#: templates/product_detail.html:58 templates/wrapper.html:100 trash.txt:89
 #: trash.txt:150
 msgid "About"
 msgstr "О компании"
 
 #: Trash/trash.txt:90 Trash/trash.txt:151 templates/about.html:24
-#: templates/category_detail.html:22 templates/category_detail.html:147
-#: templates/index.html:67 templates/product_detail.html:64
-#: templates/wrapper.html:135 trash.txt:90 trash.txt:151
+#: templates/category_detail.html:22 templates/category_detail.html:129
+#: templates/index.html:62 templates/product_detail.html:59
+#: templates/wrapper.html:103 trash.txt:90 trash.txt:151
 msgid "Products"
 msgstr "Продукты"
 
 #: Trash/trash.txt:91 Trash/trash.txt:152 templates/about.html:25
-#: templates/category_detail.html:23 templates/index.html:68
-#: templates/product_detail.html:65 templates/wrapper.html:117
-#: templates/wrapper.html:138 trash.txt:91 trash.txt:152
+#: templates/category_detail.html:23 templates/index.html:63
+#: templates/product_detail.html:60 templates/wrapper.html:85
+#: templates/wrapper.html:106 trash.txt:91 trash.txt:152
 msgid "Contact"
 msgstr "Контакт"
 
-#: main/views.py:27
+#: main/views.py:25
 msgid "Your message was successfully submitted, please wait our call !"
 msgstr "Ваше сообщение успешно отправлено, ждите нашего звонка!"
 
-#: main/views.py:82
+#: main/views.py:80
 #, fuzzy
 #| msgid "Your order was successfully submitted, please wait our call !"
 msgid "Your order was successfully submitted, please wait our call ! !"
@@ -63,32 +63,32 @@ msgid "Sorry ! the page you are looking for can not be found"
 msgstr "К сожалению, произошла ошибка, Запрошенная Вами страница не найдена!"
 
 #: templates/404.html:28
-#, fuzzy
-#| msgid "Home"
 msgid "HomePage"
 msgstr "Главный"
 
-#: templates/about.html:99 templates/about.html:101
+#: templates/about.html:87 templates/about.html:89
 msgid "About company"
 msgstr "О компании"
 
-#: templates/category_detail.html:112
+#: templates/category_detail.html:94
 msgid "category name "
 msgstr "название категории"
 
-#: templates/category_detail.html:188
-msgid " Gallery"
-msgstr ""
+#: templates/category_detail.html:155
+#, fuzzy
+#| msgid "Related poducts"
+msgid " Related images"
+msgstr "Похожие изображения"
 
-#: templates/index.html:145 templates/index.html:191
+#: templates/index.html:128 templates/index.html:169
 msgid "Production of corrugated packaging"
 msgstr "Производство гофроупаковки"
 
-#: templates/index.html:190
+#: templates/index.html:168
 msgid "About Company"
 msgstr "О компании"
 
-#: templates/index.html:193
+#: templates/index.html:171
 msgid ""
 "The company employs highly qualified specialists with extensive experience "
 "in the packaging industry, who will give you professional advice on "
@@ -98,74 +98,71 @@ msgstr ""
 "работы в упаковочной промышленности, который даст вам профессиональный совет "
 "по оптимизация использования упаковочного материала."
 
-#: templates/index.html:194
+#: templates/index.html:172
 msgid "Tashkent, Sergeli district, southern industrial zone, 154"
 msgstr "Ташкент, Сергелийский район, южная промзона, 154"
 
-#: templates/index.html:196
+#: templates/index.html:174
 msgid "More ..."
 msgstr "Больше ..."
 
-#: templates/index.html:219
+#: templates/index.html:197
 msgid "Our Products"
 msgstr "Наши продукты"
 
-#: templates/index.html:220
+#: templates/index.html:198
 msgid "What we are Producing"
 msgstr "Что мы производим"
 
-#: templates/index.html:263
+#: templates/index.html:225
 msgid "Contact with us"
 msgstr "Свяжитесь с нами"
 
-#: templates/index.html:264
+#: templates/index.html:226
 msgid "Get in touch with the agency"
 msgstr "Свяжитесь с компанией"
 
-#: templates/index.html:275 templates/product_detail.html:310
+#: templates/index.html:237 templates/product_detail.html:197
 msgid "Your name"
 msgstr "Ваше имя"
 
-#: templates/index.html:280 templates/product_detail.html:315
+#: templates/index.html:242 templates/product_detail.html:202
 msgid "Email Address"
 msgstr "Эл. адрес"
 
-#: templates/index.html:285 templates/product_detail.html:320
+#: templates/index.html:247 templates/product_detail.html:207
 msgid "Phone number"
 msgstr "Номер телефона"
 
-#: templates/index.html:292 templates/product_detail.html:332
+#: templates/index.html:254 templates/product_detail.html:219
 msgid "Write Message"
 msgstr "Написать сообщение"
 
-#: templates/index.html:295
+#: templates/index.html:257
 msgid "Send a message"
 msgstr "Отправить "
 
-#: templates/product_detail.html:195
+#: templates/product_detail.html:154
 msgid "product name "
 msgstr "наименование товара"
 
-#: templates/product_detail.html:236 templates/product_detail.html:335
+#: templates/product_detail.html:168 templates/product_detail.html:222
 msgid "Order"
 msgstr "Заказ"
 
-#: templates/product_detail.html:243
+#: templates/product_detail.html:175
 #, fuzzy
 #| msgid "Our Products"
 msgid "Order product"
 msgstr "Наши продукты"
 
-#: templates/product_detail.html:325
+#: templates/product_detail.html:212
 msgid "Quantity"
 msgstr ""
 
-#: templates/wrapper.html:126
+#: templates/wrapper.html:94
 msgid "Navigation"
 msgstr "Навигация"
 
 #~ msgid "Creators"
 #~ msgstr "Создатели"
-
-#~ msgid "Related poducts"
-#~ msgstr "Сопутствующие товары"

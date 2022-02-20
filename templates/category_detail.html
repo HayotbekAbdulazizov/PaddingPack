@@ -130,7 +130,7 @@
                 <center>
                     <div class="hr" style="height: 2px; background-color: orangered; width: 60%;">  </div>
                 </center>
-                    <div class="row pt-3" style="text-align: left; display: flex; justify-content: center;">
+                    <div class="row pt-3 products__section" style="text-align: left; display: flex; justify-content: center;">
                         {% for product in object.products.all %}
                         <div class="col-xl-3 col-lg-3 col-sm-12 col-12 card_outer pt-3 text-center" style="box-sizing: border-box; padding: 0px 0px 0px 5px; display: flex; justify-content: center;">
                             <div style="width: 85%;height: 90%; min-height: 90%; padding-top: 25px; border-radius: 15px;" >
@@ -240,6 +240,7 @@
 
     @media only screen and (min-width: 920px) {
         .padding{font-size: 60px;line-height: 5rem;}
+        .products__section{padding-left: 30px; padding-right: 30px;}
 }
 
     .main-slider{background-color: darkslategray;height: 100vh;max-height: 100vh;overflow: hidden;}
