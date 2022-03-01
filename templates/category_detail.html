@@ -169,7 +169,13 @@
     </div><!-- /.page-wrapper -->
 
 
-
+    
+    {% if request.user.is_superuser %}        
+    <center>
+        <a href="{% url 'main:category_delete' object.id %}" class="btn btn-danger"> Delete </a>
+    </center>
+    {% endif %}
+        
     <!-- /.mobile-nav__wrapper -->
 
     <!-- /.search-popup -->

@@ -1,3 +1,4 @@
+from itertools import product
 from .models import *
 from django.views.generic import DetailView, TemplateView, View
 from django.shortcuts import redirect, render
@@ -94,3 +95,19 @@ def error_404_view(request, exception):
 # ERROR
 class ErrorPageView(TemplateView):
 	template_name = '404.html'
+
+# Category Delete
+def category_delete(request, pk):
+	if request.user.is_superuser:
+		category = Category.objects.get(id=pk)
+		category.delete()
+		return redirect('main:home')
+	return redirect('main:home')
+
+# Product Delete
+def product_delete(request, pk):
+	if request.user.is_superuser:
+		product = Product.objects.get(id=pk)
+		product.delete()
+		return redirect('main:home')
+	return redirect('main:home')
